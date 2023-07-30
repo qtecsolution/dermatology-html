@@ -1,0 +1,61 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  @include transparent-button;
+  cursor: pointer;
+  font-family: $raleway;
+  font-size: size(13);
+  font-weight: 700;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-hamburger {
+  @include square(32);
+  @include flex-center;
+  overflow: hidden;
+
+  .icon {
+    @include square(24);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  @include hover {
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+.btn-book {
+  @include setBgColor($primary, $white);
+  font-family: $raleway;
+  font-size: size(13);
+  font-weight: 700;
+  @include flex-center;
+  padding: size(15.25) size(14);
+  text-align: center;
+
+  @include breakpoint(desktop1200) {
+    padding: size(15.25) size(20);
+  }
+
+  @include breakpoint(desktop1400) {
+    padding: size(15.25) size(40);
+  }
+}

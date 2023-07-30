@@ -1,0 +1,14 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.parallax {
+  position: relative;
+  transform: translateY(size(40));
+  opacity: 1;
+  transition: 1s all ease;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
