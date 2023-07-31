@@ -135,5 +135,75 @@
       }
     }
   }
+}
 
+.ourpractice {
+  &-details {
+    @include flex-column;
+    gap: size(48);
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(24);
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-60%, size(0));
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(40);
+    margin-bottom: size(48);
+
+    @include breakpoint(tab992) {
+      margin-bottom: 0;
+    }
+
+    .sectionlink {
+      max-width: size(160);
+    }
+  }
+
+  .practice-thumbnail {
+    @include flex-center;
+    @include wh100;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+    }
+
+    .thumboverlay {
+      background: rgba($black, 0.40);
+      width: size(130);
+      @include h100;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      @include flex-center;
+
+      .morelink {
+        color: $white;
+        font-family: $raleway;
+        font-size: size(13);
+        font-style: normal;
+        font-weight: 700;
+        @include transitionscolor;
+
+        @include hover {
+          color: $textlight;
+        }
+      }
+    }
+  }
 }

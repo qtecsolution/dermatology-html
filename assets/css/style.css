@@ -1278,6 +1278,73 @@ table tr th, table tr td {
   transform: translate(-60%, 0rem);
 }
 
+.ourpractice-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.ourpractice-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.ourpractice-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.ourpractice-header .icontitle::after {
+  transform: translate(-60%, 0rem);
+}
+.ourpractice-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .ourpractice-body {
+    margin-bottom: 0;
+  }
+}
+.ourpractice-body .sectionlink {
+  max-width: 10rem;
+}
+.ourpractice .practice-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.ourpractice .practice-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.ourpractice .practice-thumbnail .thumboverlay {
+  background: rgba(0, 0, 0, 0.4);
+  width: 8.125rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ourpractice .practice-thumbnail .thumboverlay .morelink {
+  color: hsl(0, 0%, 100%);
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  transition: color 350ms ease-in-out;
+}
+.ourpractice .practice-thumbnail .thumboverlay .morelink:not([disabled]):hover {
+  color: hsl(0, 0%, 91%);
+}
+
 .errormain {
   background: url(../images/error/error-bg.png) no-repeat center center/cover;
   display: flex;
