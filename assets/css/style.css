@@ -348,6 +348,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-family: "Raleway", sans-serif;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
   background: hsl(19, 89%, 54%);
@@ -638,6 +639,86 @@ button:focus,
   color: hsl(19, 89%, 54%);
 }
 .card-service-body .servicetext {
+  color: hsl(0, 0%, 20%);
+}
+
+.cardblog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.cardblog-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 13.125rem;
+  overflow: hidden;
+}
+.cardblog-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardblog-thumbnail::before, .cardblog-thumbnail::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: scale3d(0, 0, 1);
+  transition: transform 0.3s ease-out 0s;
+}
+.cardblog-thumbnail::before {
+  transform-origin: left top;
+}
+.cardblog-thumbnail::after {
+  transform-origin: right bottom;
+}
+.cardblog-thumbnail img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.cardblog-thumbnail:hover::before, .cardblog-thumbnail:hover::after, .cardblog-thumbnail:focus::before, .cardblog-thumbnail:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+.cardblog-thumbnail:hover img, .cardblog-thumbnail:focus img {
+  transform: scale(1.1);
+}
+.cardblog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.cardblog-body .blogcategory {
+  color: hsl(19, 89%, 54%);
+  font-weight: 700;
+}
+.cardblog-body .blogtitle {
+  color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardblog-body .blogtitle {
+    font-size: 1.25rem;
+  }
+}
+.cardblog-body .blogtitle:not([disabled]):hover {
+  color: hsl(19, 89%, 54%);
+}
+.cardblog-body .publishdate {
   color: hsl(0, 0%, 20%);
 }
 
@@ -1305,9 +1386,6 @@ table tr th, table tr td {
     margin-bottom: 0;
   }
 }
-.ourpractice-body .sectionlink {
-  max-width: 10rem;
-}
 .ourpractice .practice-thumbnail {
   display: flex;
   align-items: center;
@@ -1343,6 +1421,129 @@ table tr th, table tr td {
 }
 .ourpractice .practice-thumbnail .thumboverlay .morelink:not([disabled]):hover {
   color: hsl(0, 0%, 91%);
+}
+
+.experiences-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .experiences-content {
+    gap: 5rem;
+  }
+}
+.experiences-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.experiences-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.experiences-header .icontitle::after {
+  transform: translate(-50%, 0rem);
+}
+.experiences-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .experiences-detail {
+    gap: 5rem;
+  }
+}
+.experiences .experience-picture {
+  position: relative;
+}
+.experiences .experience-picture .experience-thumbnail {
+  border-radius: 0rem 37.5rem 0rem 0rem;
+  width: 100%;
+  height: 18.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.experiences .experience-picture .experience-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.experiences .experience-picture .experience-thumbnail.eventhumb {
+  border-radius: 38.75rem 0rem 0rem 0rem;
+}
+.experiences .experience-picture .expicon {
+  position: absolute;
+  left: -4.625rem;
+  bottom: -4.625rem;
+  width: 9.25rem;
+}
+.experiences .experience-picture.evenpic .expicon {
+  left: auto;
+  right: -4.625rem;
+}
+.experiences .experience-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.experiences .experience-detail .title {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+}
+.experiences .bookappointment {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .experiences .bookappointment {
+    margin-top: 5rem;
+  }
+}
+.experiences .bookappointment-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.experiences .bookappointment-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.experiences .bookappointment-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogsec-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .blogsec-content {
+    gap: 5rem;
+  }
+}
+.blogsec-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.blogsec-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.blogsec-header .icontitle::after {
+  transform: translate(-50%, 0rem);
 }
 
 .errormain {
@@ -1397,6 +1598,11 @@ table tr th, table tr td {
   }
 }
 
+.sectionlink {
+  max-width: 10rem;
+  display: flex;
+}
+
 .videobox {
   width: 100%;
   height: 23.75rem;
@@ -1416,6 +1622,15 @@ table tr th, table tr td {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.mrgnbtm {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 62rem) {
+  .mrgnbtm {
+    margin-bottom: 0;
+  }
 }
 
 .icontitle {

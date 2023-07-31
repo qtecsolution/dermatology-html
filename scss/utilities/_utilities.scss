@@ -18,6 +18,11 @@
   }
 }
 
+.sectionlink {
+  max-width: size(160);
+  @include flex;
+}
+
 .videobox {
   @include w100;
   height: size(380);
@@ -34,6 +39,14 @@
   @include square(35);
   @include flex-center;
   overflow: hidden;        
+}
+
+.mrgnbtm {
+  margin-bottom: size(64);
+
+  @include breakpoint(tab992) {
+    margin-bottom: 0;
+  }
 }
 
 .icontitle {

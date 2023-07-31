@@ -166,10 +166,6 @@
     @include breakpoint(tab992) {
       margin-bottom: 0;
     }
-
-    .sectionlink {
-      max-width: size(160);
-    }
   }
 
   .practice-thumbnail {
@@ -203,6 +199,135 @@
         @include hover {
           color: $textlight;
         }
+      }
+    }
+  }
+}
+
+.experiences {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(24);
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-50%, size(0));
+      }
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  .experience-picture {
+    position: relative;
+
+    .experience-thumbnail {
+      border-radius: size(0) size(600) size(0) size(0);
+      @include w100;
+      height: size(300);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+
+      &.eventhumb {
+        border-radius: size(620) size(0) size(0) size(0);
+      }
+    }
+
+    .expicon {
+      position: absolute;
+      left: size(-74);
+      bottom: size(-74);
+      width: size(148);
+    }
+
+    &.evenpic {
+      .expicon {
+        left: auto;
+        right: size(-74);
+      }
+    }
+  }
+
+  .experience-detail {
+    @include flex-column;
+    gap: size(40);
+
+    .title {
+      color: $black;
+      font-weight: 700;
+    }
+  }
+
+  .bookappointment {
+    margin-top: size(48);
+
+    @include breakpoint(desktop1200) {
+      margin-top: size(80);
+    }
+
+    &-info {
+      @include flex-center-column;
+      gap: size(64);
+    }
+
+    &-header {
+      @include flex-center-column;
+      gap: size(32);
+      text-align: center;
+    }
+
+    &-body {
+      @include flex-center;
+    }
+  }
+}
+
+.blogsec {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-50%, size(0));
       }
     }
   }
