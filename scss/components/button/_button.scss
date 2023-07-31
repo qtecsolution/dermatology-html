@@ -104,3 +104,26 @@ button,
     color: $white;
   }
 }
+
+.btn-border {
+  @include setBgColor($white, $black);
+  @include border(solid, 1, $textgray);
+  font-family: $raleway;
+  font-size: size(13);
+  font-weight: 700;
+  padding: size(16.5) size(14);
+  text-align: center;
+  @include transitionsall;
+
+  @include breakpoint(desktop1200) {
+    padding: size(16.5) size(20);
+  }
+
+  @include breakpoint(desktop1400) {
+    padding: size(16.5) size(40);
+  }
+
+  @include hover {
+    @include setBgColor($textgray, $black);
+  }
+}

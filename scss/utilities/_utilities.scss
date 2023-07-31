@@ -1,6 +1,13 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.italic-text {
+  font-family: $caveat;
+  font-size: size(24);
+  font-style: normal;
+  font-weight: 700;
+}
+
 .section-text {
   font-size: size(15);
   font-style: normal;

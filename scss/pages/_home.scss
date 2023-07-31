@@ -18,18 +18,88 @@
     @include flex-column;
     gap: size(24);
     color: $white;
-
-    h5 {
-      font-family: $caveat;
-      font-size: size(24);
-      font-style: normal;
-      font-weight: 700;
-    }
   }
 
   &-buttons {
     @include flex-center-vert;
     gap: size(20);
     flex-wrap: wrap;
+  }
+}
+
+.mainsection {
+  background: $white;
+  @include flex-column;
+  gap: size(150);
+  position: relative;
+  z-index: 100;
+  min-height: 100vh;
+  padding-bottom: size(80);
+
+  @include breakpoint(desktop1200) {
+    padding-bottom: size(150);
+  }
+
+  .bodyicon {
+    width: size(185);
+    height: size(372);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    top: size(48);
+    left: size(-40);
+    z-index: 10;
+  }
+}
+
+.facilities {
+  padding-top: size(80);
+
+  @include breakpoint(desktop1200) {
+    padding-top: size(150);
+  }
+
+  &-info {
+    @include flex-column;
+    gap: size(48);
+    position: relative;
+    z-index: 100;
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(40);
+    margin-bottom: size(48);
+
+    @include breakpoint(tab992) {
+      margin-bottom: 0;
+    }
+
+    .facilitylist {
+      &-item {
+        color: $primary;
+        font-size: size(15);
+        font-style: normal;
+        font-weight: 700;
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(18);
+        }
+      }
+    }
   }
 }
