@@ -952,34 +952,35 @@ table tr th, table tr td {
   overflow: hidden;
 }
 
-/*
- ERROR-SECTION START
-*/
-.error {
+.errormain {
+  background: url(../images/error/error-bg.png) no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 60vh;
   overflow: hidden;
-  padding: 1rem;
-  background: hsl(19, 89%, 54%);
 }
-.error-thumbnail {
+@media screen and (min-width: 48rem) {
+  .errormain {
+    min-height: 100vh;
+  }
+}
+.errormain .error-thumbnail {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 @media screen and (min-width: 36rem) {
-  .error-thumbnail {
+  .errormain .error-thumbnail {
     width: 18.75rem;
     height: 18.75rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .error-thumbnail {
+  .errormain .error-thumbnail {
     width: 30rem;
     height: 30rem;
   }

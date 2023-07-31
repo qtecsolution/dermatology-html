@@ -1,19 +1,18 @@
 @use "../global" as *;
 @use "../partials" as *;
 
-/*
- ERROR-SECTION START
-*/
-
-.error {
+.errormain {
+  background: url(../images/error/error-bg.png) no-repeat center center/cover;
   @include flex-center-column;
   @include w100;
-  height: 100vh;
+  min-height: 60vh;
   overflow: hidden;
-  padding: size(16);
-  background: $primary;
 
-  &-thumbnail {
+  @include breakpoint(mobile768) {
+    min-height: 100vh;
+  }
+
+  .error-thumbnail {
     @include flex-center;
     overflow: hidden;
 

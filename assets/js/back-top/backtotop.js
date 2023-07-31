@@ -8,9 +8,9 @@ up({
   // height
   height: '2.5rem',
   // background color
-  bg: 'hsl(186, 100%, 34%)',
+  bg: 'hsl(19, 89%, 54%)',
   // custom icon
-  // src: '../../assets/cursor/chevron-up-solid.svg',
+  src: '../../assets/cursor/chevron-up-solid.svg',
   // distance from the top to show the back to top button
   whenShow: 400,
   // circular button?
