@@ -306,6 +306,70 @@
   }
 }
 
+.ourpartner {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+  }
+
+  .partner-thumb {
+    @include w100;
+    height: size(80);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      filter: grayscale(100);
+      @include transitionsall;
+      
+      @include hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+.ratingsec {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-50%, size(0));
+      }
+    }
+  }
+}
+
 .blogsec {
   &-content {
     @include flex-column;

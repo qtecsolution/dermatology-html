@@ -177,3 +177,54 @@
     }
   }
 }
+
+.cardreview {
+  background: $white;
+  @include border(solid, 1, $textlight);
+  box-shadow: $ratingshadow;
+  @include flex-column;
+  gap: size(32);
+  padding: size(32) size(40);
+
+  .reviewlist {
+    @include list-horizontal;
+
+    &-item {
+      @include square(32);
+      @include flex-center;
+      overflow: hidden;
+    }
+  }
+
+  .reviewinfo {
+    @include flex-column;
+    gap: size(16);
+
+    .section-text {
+      font-size: size(16);
+    }
+  }
+
+  .authorinfo {
+    @include flex-center-vert;
+    gap: size(8);
+
+    .author-thumbnail {
+      @include square(36);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+
+    .authorname {
+      color: $black;
+      font-size: size(20);
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}

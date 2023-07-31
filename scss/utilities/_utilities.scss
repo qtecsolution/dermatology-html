@@ -23,6 +23,11 @@
   @include flex;
 }
 
+.sectlink {
+  max-width: size(250);
+  @include flex;
+}
+
 .videobox {
   @include w100;
   height: size(380);
