@@ -160,6 +160,14 @@ a:hover {
   text-decoration: none;
 }
 
+strong {
+  font-weight: 700;
+}
+
+iframe {
+  @include w100;
+}
+
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {

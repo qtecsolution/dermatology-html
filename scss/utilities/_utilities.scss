@@ -1,6 +1,28 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.section-text {
+  font-size: size(15);
+  font-style: normal;
+  font-weight: 400;
+
+  @include breakpoint(desktop1200) {
+    font-size: size(18);
+  }
+}
+
+.videobox {
+  @include w100;
+  height: size(380);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba($black, 0.6);
+}
+
 .parallax {
   position: relative;
   transform: translateY(size(40));

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
   <title>Dermatology - Responsive HTML Template</title>
   <!-- FAVICON-ICON -->
   <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
@@ -32,7 +33,7 @@
   <!-- PRELOADER-END -->
 
   <!-- HEADER-SECTION START -->
-  <header class="header fixed-top">
+  <header class="header fixed-top pe-0">
     <div class="container">
       <nav id="mainnav" class="d-flex align-items-center justify-content-between" aria-labelledby="mainnav">
         <!-- HAMBURGER-MENU START -->
@@ -295,6 +296,44 @@
   </header>
   <!-- HEADER-SECTION END -->
 
+  <!-- HOME-BANNER SECTION START -->
+  <section class="homebanner" style="background: url(assets/images/home/hero-image/hero.png) no-repeat center center/cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="homebanner-content">
+            <div class="homebanner-info">
+              <h5>Skin care . Hair  care . Botox</h5>
+              <h1 class="display-3">
+                Enhance your cheeks <strong>and chin gracefully</strong>
+              </h1>
+              <p class="section-text">
+                Inut neque egestas sed viverra parturient non nascetur diam vulputate vitae leo tristique quis suspendisse odio nisi.
+              </p>
+            </div>
+            
+            <div class="homebanner-buttons">
+              <a href="appointment.html" class="btn-banner btn-consult">
+                Request Free Consult
+              </a>
+
+              <button type="button" class="btn-banner btn-video" data-bs-toggle="modal" data-bs-target="#playVideo">
+                <span class="icon">
+                  <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.5L9 5.5L1 10.5V0.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="text">Play Video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+  <!-- HOME-BANNER SECTION END -->
+
   <!-- MAIN-SECTION START -->
   <main class="mainsection">
 
@@ -453,6 +492,29 @@
     </div>
   </footer>
   <!-- FOOTER-SECTION END -->
+
+  <!-- PLAY-VIDEO MODAL START -->
+  <div class="modal fade pe-0" id="playVideo" tabindex="-1" aria-labelledby="playVideo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">So You Want to Be a DERMATOLOGIST</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="videobox">
+            <iframe height="380" src="https://www.youtube.com/embed/GVC8sZZ0giw" title="So You Want to Be a DERMATOLOGIST" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PLAY-VIDEO MODAL END -->
 
   <!-- BOOTSTRAP-JS -->
   <script src="assets/js/bootsrap/bootstrap.bundle.min.js"></script>

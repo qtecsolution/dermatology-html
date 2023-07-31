@@ -387,6 +387,14 @@ a:hover {
   text-decoration: none;
 }
 
+strong {
+  font-weight: 700;
+}
+
+iframe {
+  width: 100%;
+}
+
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
@@ -463,6 +471,59 @@ button:focus,
   .btn-book {
     padding: 0.953125rem 2.5rem;
   }
+}
+
+.btn-banner {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.953125rem 0.875rem;
+  text-align: center;
+}
+@media screen and (min-width: 75rem) {
+  .btn-banner {
+    padding: 0.953125rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .btn-banner {
+    padding: 0.953125rem 2.5rem;
+  }
+}
+
+.btn-consult {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
+}
+@media screen and (min-width: 75rem) {
+  .btn-consult {
+    width: 15rem;
+  }
+}
+
+.btn-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: hsl(19, 89%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 75rem) {
+  .btn-video {
+    width: 10.625rem;
+  }
+}
+.btn-video .icon {
+  width: 0.625rem;
+  height: 0.6875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-video .text {
+  font: inherit;
+  color: hsl(0, 0%, 100%);
 }
 
 .header {
@@ -603,6 +664,12 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .modal-header {
   border-bottom: 0;
 }
+.modal-header .modal-title {
+  color: hsl(210, 21%, 33%);
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
 .modal-header .btn-close {
   width: 1.5rem;
   height: 1.5rem;
@@ -620,6 +687,10 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .modal-header .btn-close:not([disabled]):hover svg {
   transform: rotate(90deg);
 }
+.modal-header .btn-close:not([disabled]):hover svg path {
+  fill: hsl(19, 89%, 54%);
+}
+
 .tooltip-inner {
   background: hsl(210, 21%, 33%);
   font-size: 0.75rem;
@@ -952,6 +1023,39 @@ table tr th, table tr td {
   overflow: hidden;
 }
 
+.homebanner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.homebanner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 20;
+}
+.homebanner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+.homebanner-info h5 {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.homebanner-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
 .errormain {
   background: url(../images/error/error-bg.png) no-repeat center center/cover;
   display: flex;
@@ -984,6 +1088,29 @@ table tr th, table tr td {
     width: 30rem;
     height: 30rem;
   }
+}
+
+.section-text {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 75rem) {
+  .section-text {
+    font-size: 1.125rem;
+  }
+}
+
+.videobox {
+  width: 100%;
+  height: 23.75rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .parallax {

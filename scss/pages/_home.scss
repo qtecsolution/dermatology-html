@@ -1,3 +1,35 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+.homebanner {
+  @include w100;
+  min-height: 100vh;
+  @include flex-center-vert;
+  position: relative;
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+    position: relative;
+    z-index: 20;
+  }
+
+  &-info {
+    @include flex-column;
+    gap: size(24);
+    color: $white;
+
+    h5 {
+      font-family: $caveat;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+
+  &-buttons {
+    @include flex-center-vert;
+    gap: size(20);
+    flex-wrap: wrap;
+  }
+}

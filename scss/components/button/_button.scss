@@ -59,3 +59,48 @@ button,
     padding: size(15.25) size(40);
   }
 }
+
+.btn-banner {
+  font-family: $raleway;
+  font-size: size(13);
+  font-weight: 700;
+  padding: size(15.25) size(14);
+  text-align: center;
+
+  @include breakpoint(desktop1200) {
+    padding: size(15.25) size(20);
+  }
+
+  @include breakpoint(desktop1400) {
+    padding: size(15.25) size(40);
+  }
+}
+
+.btn-consult {
+  @include setBgColor($white, $textprimary);
+
+  @include breakpoint(desktop1200) {
+    width: size(240);
+  }
+}
+
+.btn-video {
+  @include flex-center;
+  gap: size(10);
+  @include setBgColor($primary, $white);
+
+  @include breakpoint(desktop1200) {
+    width: size(170);
+  }
+
+  .icon {
+    width: size(10);
+    height: size(11);
+    @include flex-center;
+  }
+
+  .text {
+    font: inherit;
+    color: $white;
+  }
+}
