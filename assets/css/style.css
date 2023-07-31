@@ -404,8 +404,12 @@ iframe {
 .display-1,
 .display-2,
 .display-3,
-.display-4 {
+.display-4,
+.display-4,
+.display-5,
+.display-6 {
   font-family: "Raleway", sans-serif;
+  position: relative;
 }
 
 button,
@@ -1157,6 +1161,12 @@ table tr th, table tr td {
     font-size: 1.125rem;
   }
 }
+.facilities-detail .appointmentinfo {
+  display: flex;
+  align-items: center;
+  max-width: 13.25rem;
+  overflow: hidden;
+}
 
 .errormain {
   background: url(../images/error/error-bg.png) no-repeat center center/cover;
@@ -1220,6 +1230,26 @@ table tr th, table tr td {
   inset: 0;
   z-index: 10;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.titleicon {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.icontitle {
+  position: relative;
+}
+.icontitle::after {
+  content: url("data:image/svg+xml, %3Csvg width='36' height='35' viewBox='0 0 36 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.355469' width='35' height='35' fill='%23F26522'/%3E%3C/svg%3E");
+  position: absolute;
+  bottom: -0.9375rem;
+  z-index: -1;
+  transform: translate(-80%, 0.125rem);
 }
 
 .parallax {

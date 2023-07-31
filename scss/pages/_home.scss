@@ -101,5 +101,11 @@
         }
       }
     }
+
+    .appointmentinfo {
+      @include flex-center-vert;
+      max-width: size(212);
+      overflow: hidden;
+    }
   }
 }
