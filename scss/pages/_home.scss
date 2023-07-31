@@ -30,13 +30,13 @@
 .mainsection {
   background: $white;
   @include flex-column;
-  gap: size(150);
+  gap: size(80);
   position: relative;
   z-index: 100;
-  min-height: 100vh;
   padding-bottom: size(80);
 
   @include breakpoint(desktop1200) {
+    gap: size(150);
     padding-bottom: size(150);
   }
 
@@ -108,4 +108,32 @@
       overflow: hidden;
     }
   }
+}
+
+.ourservice {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-60%, size(0));
+      }
+    }
+  }
+
 }

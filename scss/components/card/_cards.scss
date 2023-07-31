@@ -1,3 +1,94 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.card-service {
+  @include flex-column;
+  gap: size(48);
+  @include h100;
+
+  &-header {
+    position: relative;
+
+    .service-thumbnail {
+      @include flex-center;
+      @include w100;
+      height: size(294);
+      overflow: hidden;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        background: rgba($black, 0.1);
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        transform: scale3d(0, 0, 1);
+        transition: transform .3s ease-out 0s;
+      }
+
+      &::before {
+        transform-origin: left top;
+      }
+
+      &::after {
+        transform-origin: right bottom;
+      }
+
+      img {
+        @include wh100;
+        @include transitiontransform;
+      }
+
+      &:hover,
+      &:focus {
+        &::before,
+        &::after {
+          transform: scale3d(1, 1, 1);
+        }
+
+        img {
+          @include scale(1.1);
+        }
+      }
+    }
+
+    .servicecount {
+      color: rgba($black, 0.20);
+      font-family: $raleway;
+      font-size: size(116);
+      font-style: normal;
+      font-weight: 700;
+      position: absolute;
+      bottom: size(-60);
+      left: 0;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(16);
+
+    .servicetitle {
+      color: $black;
+      font-family: $raleway;
+      font-size: size(16);
+      font-style: normal;
+      font-weight: 700;
+      @include line-clamp;
+      @include transitionscolor;
+
+      @include breakpoint(tab992) {
+        font-size: size(20);
+      }
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .servicetext {
+      color: $textprimary;
+    }
+  }
+}

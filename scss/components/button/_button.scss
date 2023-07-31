@@ -111,6 +111,7 @@ button,
   font-family: $raleway;
   font-size: size(13);
   font-weight: 700;
+  min-width: size(200);
   padding: size(16.5) size(14);
   text-align: center;
   @include transitionsall;
