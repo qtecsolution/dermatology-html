@@ -306,6 +306,33 @@
   }
 }
 
+.ourgallery {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(24);
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-50%, size(0));
+      }
+    }
+  }
+
+}
+
 .ourpartner {
   &-content {
     @include flex-column;
