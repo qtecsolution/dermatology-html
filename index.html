@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dermatology</title>
+  <title>Dermatology - Responsive HTML Template</title>
   <!-- FAVICON-ICON -->
   <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
   <!-- BACK-TO-TOP-CSS -->
@@ -15,8 +15,19 @@
 </head>
 <body class="p-0">
   <!-- PRELOADER-START -->
-  <div class="preloader">
-
+  <div class="preloader" id="preloader">
+    <div class="loader">
+      <svg width="200" height="150" viewBox="0 0 818 498" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="strokeGradient">
+            <stop offset="5%" stop-color="#191919" />
+            <stop offset="60%" stop-color="#F26522" />
+            <stop offset="100%" stop-color="#F26522" />
+          </linearGradient>
+        </defs>
+        <path class="pulse" d="M0 305.5H266L295.5 229.5L384 496L460 1.5L502.5 377.5L553 305.5H818" stroke-width="8" />
+      </svg>
+    </div>
   </div>
   <!-- PRELOADER-END -->
 
@@ -448,7 +459,7 @@
   <!-- TOOLTIP-JS -->
   <script src="assets/js/tooltip/tooltip.js"></script>
   <!-- PRELOADER-JS -->
-  <!-- <script src="assets/js/loader/loader.js"></script> -->
+  <script src="assets/js/loader/loader.js"></script>
   <!-- COPYRIGHT-JS -->
   <script src="assets/js/copyright/copyright.js"></script>
   <!-- BACK-TO-TOP-JS -->

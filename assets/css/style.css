@@ -740,6 +740,39 @@ input[type=search]::-webkit-search-results-decoration:focus {
   }
 }
 
+.preloader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background: hsl(0, 0%, 91%);
+}
+.preloader .loader {
+  width: 12.5rem;
+  height: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.preloader .loader .pulse {
+  stroke-dasharray: 1840;
+  stroke-dashoffset: 3680;
+  animation: dash 2s ease-out infinite;
+  stroke: url(#strokeGradient);
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 table tr {
   vertical-align: middle;
 }
