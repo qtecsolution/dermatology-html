@@ -1664,22 +1664,23 @@ table tr th, table tr td {
   color: hsl(0, 0%, 0%);
   font-weight: 700;
 }
-.experiences .bookappointment {
+
+.bookappointment {
   margin-top: 3rem;
 }
 @media screen and (min-width: 75rem) {
-  .experiences .bookappointment {
+  .bookappointment {
     margin-top: 5rem;
   }
 }
-.experiences .bookappointment-info {
+.bookappointment-info {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 4rem;
 }
-.experiences .bookappointment-header {
+.bookappointment-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1687,7 +1688,7 @@ table tr th, table tr td {
   gap: 2rem;
   text-align: center;
 }
-.experiences .bookappointment-body {
+.bookappointment-body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1912,6 +1913,97 @@ table tr th, table tr td {
 }
 .blogsec-header .icontitle::after {
   transform: translate(-50%, 0rem);
+}
+
+.contactbanner {
+  position: relative;
+  height: 28.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.contactbanner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 100;
+}
+.contactbanner-content h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.pricingbanner {
+  position: relative;
+  height: 28.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.pricingbanner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 100;
+}
+.pricingbanner-content h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.pricingsec .pricing-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.pricingsec .pricingthumb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pricingsec .pricingthumb img {
+  width: 100%;
+  height: 100%;
+}
+.pricingsec .pricing-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.pricingsec .pricing-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.pricingsec .pricing-body .table thead {
+  background: hsl(18, 100%, 97%);
+}
+.pricingsec .pricing-body .table thead tr th {
+  color: hsl(0, 0%, 20%);
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+}
+.pricingsec .pricing-body .table tbody tr th, .pricingsec .pricing-body .table tbody tr td {
+  color: hsl(210, 21%, 33%);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.table > :not(caption) > * > * {
+  background: transparent;
+  border-color: hsl(18, 100%, 97%);
 }
 
 .servicebanner {

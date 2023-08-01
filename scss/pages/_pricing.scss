@@ -1,3 +1,81 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+.pricingbanner {
+  position: relative;
+  height: size(450);
+  @include flex-center;
+  margin-bottom: size(80);
+
+  &-content {
+    @include flex-center-column;
+    gap: size(20);
+    position: relative;
+    z-index: 100;
+
+    h1 {
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}
+
+.pricingsec {
+  .pricing-details {
+    @include flex-column;
+    gap: size(60);
+  }
+
+  .pricingthumb {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+    }
+  }
+
+  .pricing-header {
+    @include flex-column;
+    gap: size(24);
+
+    h5 {
+      color: $primary;
+    }
+  }
+
+  .pricing-body {
+    .table {
+      thead {
+        background: $theadbg;
+
+        tr {
+          th {
+            color: $textprimary;
+            font-family: $raleway;
+            font-size: size(16);
+            font-style: normal;
+            font-weight: 600;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          th,td {
+            color: $tabletext;
+            font-size: size(18);
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table>:not(caption)>*>* {
+  background: transparent;
+  border-color: $theadbg;
+}

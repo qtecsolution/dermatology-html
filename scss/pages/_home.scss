@@ -281,28 +281,28 @@
       font-weight: 700;
     }
   }
+}
 
-  .bookappointment {
-    margin-top: size(48);
+.bookappointment {
+  margin-top: size(48);
 
-    @include breakpoint(desktop1200) {
-      margin-top: size(80);
-    }
+  @include breakpoint(desktop1200) {
+    margin-top: size(80);
+  }
 
-    &-info {
-      @include flex-center-column;
-      gap: size(64);
-    }
+  &-info {
+    @include flex-center-column;
+    gap: size(64);
+  }
 
-    &-header {
-      @include flex-center-column;
-      gap: size(32);
-      text-align: center;
-    }
+  &-header {
+    @include flex-center-column;
+    gap: size(32);
+    text-align: center;
+  }
 
-    &-body {
-      @include flex-center;
-    }
+  &-body {
+    @include flex-center;
   }
 }
 
