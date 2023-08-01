@@ -19,3 +19,137 @@
     }
   }
 }
+
+.contactsection {
+  .contact-details {
+    @include flex-column;
+    gap: size(60);
+  }
+
+  .map {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    margin-bottom: size(48);
+
+    @include breakpoint(tab992) {
+      margin-bottom: 0;
+    }
+  }
+  
+  .contact-header {
+    @include flex-column;
+    gap: size(24);
+
+    h5 {
+      color: $primary;
+    }
+
+    .title {
+      color: $black;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+  
+  .contact-body {
+    .form-control {
+      @include setBgColor($inputbg, $footerbg);
+      border: none;
+      @include border-single(bottom, solid, 1, $inputborder);
+      @include radius(0);
+      font-size: size(14);
+      font-style: normal;
+      font-weight: 400;
+      padding: size(11) size(16);
+
+      &:focus {
+        background: $theadbg;
+        border-color: $theadbg;
+      }
+    }
+
+    .form-control.is-valid, .was-validated .form-control:valid {
+      background: $inputbg;
+      border-color: $success;
+    }
+
+    .form-control.is-invalid, .was-validated .form-control:invalid {
+      background: $inputbg;
+      border-color: $danger;
+    }
+
+    .btn-border {
+      height: size(50);
+    }
+  }
+}
+
+.newsletter {
+  &-content {
+    @include flex-center-column;
+    gap: size(32);
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+
+    .title {
+      color: $black;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .titlebox {
+      max-width: size(330);
+      margin-inline: auto;
+    }
+  }
+
+  &-body {
+    @include w100;
+    overflow: hidden;
+
+    form {
+      .form-control {
+        @include setBgColor($inputbg, $footerbg);
+        border: none;
+        @include border-single(bottom, solid, 1, $inputborder);
+        @include radius(0);
+        font-size: size(14);
+        font-style: normal;
+        font-weight: 400;
+        padding: size(14) size(16);
+  
+        &:focus {
+          background: $theadbg;
+          border-color: $theadbg;
+        }
+      }
+  
+      .form-control.is-valid, .was-validated .form-control:valid {
+        background: $inputbg;
+        border-color: $success;
+      }
+  
+      .form-control.is-invalid, .was-validated .form-control:invalid {
+        background: $inputbg;
+        border-color: $danger;
+      }
+
+      .btn-border {
+        @include w100;
+        height: size(50);
+        min-width: 100%;
+      }
+    }
+  }
+}

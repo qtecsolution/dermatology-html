@@ -358,3 +358,68 @@
     }
   }
 }
+
+.cardinfo {
+  @include flex-center-column;
+  gap: size(24);
+  text-align: center;
+
+  &-header {
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  &-thumbnail {
+    @include square(114);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(16);
+
+    .title {
+      color: $black;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .timelist {
+      @include list-vertical;
+      gap: size(4);
+
+      &-item {
+        font-size: size(15);
+        font-style: normal;
+        font-weight: 400;
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(18);
+        }
+      }
+    }
+
+    .contactlist {
+      @include list-vertical;
+      gap: size(4);
+
+      &-link {
+        color: $textprimary;
+        font-size: size(15);
+        font-style: normal;
+        font-weight: 400;
+        @include transitionscolor;
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(18);
+        }
+
+        @include hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
