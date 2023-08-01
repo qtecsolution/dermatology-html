@@ -1,6 +1,25 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
-// .breadcrumb {
+.breadcrumb {
+  @include flex-center-vert;
+  gap: size(4);
+  margin-bottom: 0;
 
-// }
+  &-item {
+    color: $white;
+    font-family: $arsenal;
+    font-size: size(20);
+    font-weight: 400;
+
+    a {
+      color: inherit;
+      font: inherit;
+    }
+
+    &.active {
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}

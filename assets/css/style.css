@@ -413,6 +413,27 @@ iframe {
   position: relative;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0;
+}
+.breadcrumb-item {
+  color: hsl(0, 0%, 100%);
+  font-family: "Arsenal", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.breadcrumb-item a {
+  color: inherit;
+  font: inherit;
+}
+.breadcrumb-item.active {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
 button,
 [type=button],
 [type=reset],
@@ -1888,6 +1909,28 @@ table tr th, table tr td {
   transform: translate(-50%, 0rem);
 }
 
+.servicebanner {
+  position: relative;
+  height: 28.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.servicebanner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 100;
+}
+.servicebanner-content h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
 .errormain {
   background: url(../images/error/error-bg.png) no-repeat center center/cover;
   display: flex;
@@ -1960,6 +2003,13 @@ table tr th, table tr td {
   inset: 0;
   z-index: 10;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.bannerovelay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(58, 58, 58, 0.7);
 }
 
 .titleicon {
