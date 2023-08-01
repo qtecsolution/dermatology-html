@@ -333,6 +333,114 @@
 
 }
 
+.ourdoctors {
+  min-height: 100vh;
+  padding: size(80) size(0);
+  
+  @include breakpoint(desktop1200) {
+    padding: size(120) size(0);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(160) size(0) size(125);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(24);
+    position: relative;
+    z-index: 10;
+
+    h5 {
+      color: $primary;
+    }
+  }
+
+  .doctorinfo {
+    position: relative;
+
+    .doctor-thumbnail {
+      position: relative;
+      @include flex-center;
+
+      img {
+        @include wh100;
+      }
+
+      .icon {
+        width: size(162);
+        height: size(170);
+        @include flex-center;
+        overflow: hidden;
+        position: absolute;
+        bottom: size(-85);
+        right: size(-81);
+        z-index: 200;
+      }
+    }
+
+    .detail {
+      position: relative;
+      margin-top: size(-48);
+      z-index: 100;
+      background: $footerbg;
+      padding: size(24);
+      @include flex-column;
+      gap: size(24);
+      max-width: 80%;
+      margin-inline: auto;
+
+      @include breakpoint(mobile768) {
+        margin-top: size(-96);
+        max-width: 70%;
+      }
+
+      @include breakpoint(tab992) {
+        padding: size(48);
+        max-width: 60%;
+      }
+
+      .name {
+        color: $white;
+        font-family: $raleway;
+        font-size: size(22);
+        font-style: normal;
+        font-weight: 700;
+      }
+      
+      .section-text {
+        color: $white;
+      }
+
+      .learnmorebox {
+        max-width: size(160);
+        @include flex;
+      }
+    }
+  }
+
+  .sliderbuttons {
+    position: absolute;
+    top: 20%;
+    @include w100;
+    @include flex-center-between;
+    z-index: 200;
+
+    @include breakpoint(tab992) {
+      top: 30%;
+    }
+  }
+}
+
 .ourpartner {
   &-content {
     @include flex-column;

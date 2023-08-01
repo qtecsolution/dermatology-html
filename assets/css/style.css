@@ -558,6 +558,39 @@ button:focus,
   color: hsl(0, 0%, 0%);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 62rem) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 3.8125rem;
+    height: 3.8125rem;
+  }
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+  width: 0rem;
+  height: 0rem;
+  font-size: 0rem;
+  display: none;
+}
+
+.swiper-button-next {
+  right: 0rem;
+}
+
+.swiper-button-prev {
+  left: 0rem;
+}
+
 .card-service {
   display: flex;
   flex-direction: column;
@@ -651,9 +684,6 @@ button:focus,
 .card-gallery-header {
   width: 100%;
   height: 22.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 .card-gallery-body {
@@ -817,6 +847,25 @@ button:focus,
 }
 .cardblog-body .publishdate {
   color: hsl(0, 0%, 20%);
+}
+
+.card-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+.card-counter-header .display-2 {
+  color: hsl(0, 0%, 20%);
+  font-weight: 700;
+}
+.card-counter-body .countertitle {
+  color: hsl(0, 0%, 20%);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .header {
@@ -1638,6 +1687,118 @@ table tr th, table tr td {
 }
 .ourgallery-header .icontitle::after {
   transform: translate(-50%, 0rem);
+}
+
+.ourdoctors {
+  min-height: 100vh;
+  padding: 5rem 0rem;
+}
+@media screen and (min-width: 75rem) {
+  .ourdoctors {
+    padding: 7.5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .ourdoctors {
+    padding: 10rem 0rem 7.8125rem;
+  }
+}
+.ourdoctors-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .ourdoctors-content {
+    gap: 5rem;
+  }
+}
+.ourdoctors-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+.ourdoctors-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.ourdoctors .doctorinfo {
+  position: relative;
+}
+.ourdoctors .doctorinfo .doctor-thumbnail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ourdoctors .doctorinfo .doctor-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.ourdoctors .doctorinfo .doctor-thumbnail .icon {
+  width: 10.125rem;
+  height: 10.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: -5.3125rem;
+  right: -5.0625rem;
+  z-index: 200;
+}
+.ourdoctors .doctorinfo .detail {
+  position: relative;
+  margin-top: -3rem;
+  z-index: 100;
+  background: hsl(0, 0%, 11%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 80%;
+  margin-inline: auto;
+}
+@media screen and (min-width: 48rem) {
+  .ourdoctors .doctorinfo .detail {
+    margin-top: -6rem;
+    max-width: 70%;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .ourdoctors .doctorinfo .detail {
+    padding: 3rem;
+    max-width: 60%;
+  }
+}
+.ourdoctors .doctorinfo .detail .name {
+  color: hsl(0, 0%, 100%);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.ourdoctors .doctorinfo .detail .section-text {
+  color: hsl(0, 0%, 100%);
+}
+.ourdoctors .doctorinfo .detail .learnmorebox {
+  max-width: 10rem;
+  display: flex;
+}
+.ourdoctors .sliderbuttons {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+}
+@media screen and (min-width: 62rem) {
+  .ourdoctors .sliderbuttons {
+    top: 30%;
+  }
 }
 
 .ourpartner-content {

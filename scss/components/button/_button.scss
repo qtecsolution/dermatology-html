@@ -128,3 +128,30 @@ button,
     @include setBgColor($textgray, $black);
   }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  @include square(40);
+  @include flex-center;
+  overflow: hidden;
+
+  @include breakpoint(tab992) {
+    @include square(61);
+  }
+
+  &::after {
+    content: '';
+    width: size(0);
+    height: size(0);
+    font-size: size(0);
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  right: size(0);
+}
+
+.swiper-button-prev {
+  left: size(0);
+}

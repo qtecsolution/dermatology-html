@@ -101,7 +101,6 @@
   &-header {
     @include w100;
     height: size(360);
-    @include flex-center;
     overflow: hidden;
   }
 
@@ -262,6 +261,28 @@
 
     .publishdate {
       color: $textprimary;
+    }
+  }
+}
+
+.card-counter {
+  @include flex-center-column;
+  text-align: center;
+  gap: size(24);
+
+  &-header {
+    .display-2 {
+      color: $textprimary;
+      font-weight: 700;
+    }
+  }
+
+  &-body {
+    .countertitle {
+      color: $textprimary;
+      font-size: size(20);
+      font-style: normal;
+      font-weight: 700;
     }
   }
 }
