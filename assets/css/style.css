@@ -422,8 +422,13 @@ iframe {
 .breadcrumb-item {
   color: hsl(0, 0%, 100%);
   font-family: "Arsenal", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
+}
+@media screen and (min-width: 48rem) {
+  .breadcrumb-item {
+    font-size: 1.25rem;
+  }
 }
 .breadcrumb-item a {
   color: inherit;
@@ -1929,6 +1934,144 @@ table tr th, table tr td {
 .servicebanner-content h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+}
+
+.servicedetails {
+  position: relative;
+  z-index: 100;
+}
+.servicedetails-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  overflow: hidden;
+}
+.servicedetails .servicesingle {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  z-index: 100;
+}
+.servicedetails .servicesingle .service-thumb {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.servicedetails .servicesingle .service-thumb img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.servicedetails .servicesingle .service-thumb img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.servicedetails .servicesingle .leftcontent,
+.servicedetails .servicesingle .rightcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.servicedetails .servicesingle .leftcontent .contentbox,
+.servicedetails .servicesingle .leftcontent .procedure,
+.servicedetails .servicesingle .leftcontent .benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.servicedetails .servicesingle .leftcontent .contentbox .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.servicedetails .servicesingle .leftcontent .procedure .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.servicedetails .servicesingle .leftcontent .procedure .procedurelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.servicedetails .servicesingle .leftcontent .procedure .procedurelist-item {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 75rem) {
+  .servicedetails .servicesingle .leftcontent .procedure .procedurelist-item {
+    font-size: 1.125rem;
+  }
+}
+.servicedetails .servicesingle .leftcontent .benefits .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.servicedetails .servicesingle .leftcontent .benefits .benefitslist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.servicedetails .servicesingle .leftcontent .benefits .benefitslist-item {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 75rem) {
+  .servicedetails .servicesingle .leftcontent .benefits .benefitslist-item {
+    font-size: 1.125rem;
+  }
+}
+.servicedetails .servicesingle .rightcontent .popular {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.servicedetails .servicesingle .rightcontent .popular-title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.servicedetails .sliderbuttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.servicedetails .sliderbuttons .swiper-button-prev,
+.servicedetails .sliderbuttons .swiper-button-next {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.servicedetails .sliderbuttons .swiper-button-prev .icon,
+.servicedetails .sliderbuttons .swiper-button-next .icon {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.25rem;
+}
+.servicedetails .sliderbuttons .swiper-button-prev .text,
+.servicedetails .sliderbuttons .swiper-button-next .text {
+  font-weight: 700;
+  color: hsl(0, 0%, 20%);
+}
+.servicedetails .sliderbuttons .swiper-button-prev:not([disabled]):hover .icon svg path,
+.servicedetails .sliderbuttons .swiper-button-next:not([disabled]):hover .icon svg path {
+  fill: hsl(19, 89%, 54%);
+}
+.servicedetails .sliderbuttons .swiper-button-prev:not([disabled]):hover .text,
+.servicedetails .sliderbuttons .swiper-button-next:not([disabled]):hover .text {
+  color: hsl(19, 89%, 54%);
 }
 
 .errormain {

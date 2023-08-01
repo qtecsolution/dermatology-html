@@ -9,8 +9,12 @@
   &-item {
     color: $white;
     font-family: $arsenal;
-    font-size: size(20);
+    font-size: size(16);
     font-weight: 400;
+    
+    @include breakpoint(mobile768) {
+      font-size: size(20);
+    }
 
     a {
       color: inherit;
