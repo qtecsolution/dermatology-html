@@ -1992,6 +1992,134 @@ table tr th, table tr td {
   transform: translate(-50%, 0rem);
 }
 
+.myappointment {
+  padding-top: 5rem;
+}
+.myappointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.myappointment-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.myappointment-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.myappointment-header .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.myappointment-body {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .myappointment-body {
+    margin-bottom: 0;
+  }
+}
+.myappointment-body .appointmentform .form-control {
+  background: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 11%);
+  border: none;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 88%);
+  border-radius: 0rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0.6875rem 1rem;
+}
+.myappointment-body .appointmentform .form-control:focus {
+  background: hsl(18, 100%, 97%);
+  border-color: hsl(18, 100%, 97%);
+}
+.myappointment-body .appointmentform .form-control.is-valid, .myappointment-body .appointmentform .was-validated .form-control:valid {
+  background: hsl(0, 0%, 96%);
+  border-color: hsl(152, 69%, 31%);
+}
+.myappointment-body .appointmentform .form-control.is-invalid, .myappointment-body .appointmentform .was-validated .form-control:invalid {
+  background: hsl(0, 0%, 96%);
+  border-color: hsl(354, 70%, 54%);
+}
+.myappointment-body .appointmentform .choices {
+  font-size: 0.875rem;
+  margin-bottom: 0rem;
+}
+.myappointment-body .appointmentform .choices__inner {
+  border: none;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 88%);
+  border-radius: 0rem;
+}
+.myappointment-body .appointmentform .choices[data-type*=select-one]::after {
+  border: none;
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23333333' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.3125rem;
+}
+.myappointment-body .appointmentform .choices[data-type*=select-one].is-open::after {
+  border: none;
+  margin-top: 0;
+  transform: rotate(180deg);
+  margin-top: -0.625rem;
+}
+.myappointment-body .appointmentform .btn-border {
+  height: 3.125rem;
+}
+.myappointment .appointment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.myappointment .appointment-info .appointment-thumb {
+  width: 100%;
+  min-height: 15.625rem;
+  max-height: 37.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.myappointment .appointment-info .appointment-thumb::before, .myappointment .appointment-info .appointment-thumb::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: scale3d(0, 0, 1);
+  transition: transform 0.3s ease-out 0s;
+}
+.myappointment .appointment-info .appointment-thumb::before {
+  transform-origin: left top;
+}
+.myappointment .appointment-info .appointment-thumb::after {
+  transform-origin: right bottom;
+}
+.myappointment .appointment-info .appointment-thumb img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.myappointment .appointment-info .appointment-thumb:hover::before, .myappointment .appointment-info .appointment-thumb:hover::after, .myappointment .appointment-info .appointment-thumb:focus::before, .myappointment .appointment-info .appointment-thumb:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+.myappointment .appointment-info .appointment-thumb:hover img, .myappointment .appointment-info .appointment-thumb:focus img {
+  transform: scale(1.1);
+}
+.myappointment .appointment-info .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
 .contactbanner {
   position: relative;
   height: 28.125rem;

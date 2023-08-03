@@ -8,6 +8,10 @@
   <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
   <!-- BACK-TO-TOP-CSS -->
   <link rel="stylesheet" href="assets/css/back-top/back-top.css">
+  <!-- FLATPICKR-CSS -->
+  <link rel="stylesheet" href="assets/css/flatpickr/flatpickr.min.css">
+  <!-- CHOICE-SELECT-CSS -->
+  <link rel="stylesheet" href="assets/css/choices/choices.min.css">
   <!-- BOOTSTRAP-CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
   <!-- CUSTOM-CSS -->
@@ -297,7 +301,214 @@
 
   <!-- MAIN-SECTION START -->
   <main class="mainsection">
+    <!-- MYAPPOINTMENT-SECTION START -->
+    <section class="myappointment">
+      <div class="container">
+        <div class="row g-4">
+          <!-- APPOINTMENT-FORM -->
+          <div class="col-lg-6">
+            <div class="myappointment-details">
+              <div class="myappointment-header">
+                <h5 class="italic-text">Appointments</h5>
+                <h2 class="title">
+                  Get a quick appointment for better skincare!
+                </h2>
+                <p class="section-text">
+                  There are many variations of passages of Lorem Ipsum available, 
+                  but the majority have suffered alteration in some form.
+                </p>
+              </div>
 
+              <div class="myappointment-body">
+                <form class="appointmentform needs-validation" novalidate>
+                  <div class="row g-4">
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control" id="firstname" placeholder="First name" autocomplete="off" required>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control" id="lastname" placeholder="Last name" autocomplete="off" required>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <input type="email" class="form-control" id="emailaddress" placeholder="E-mail address" autocomplete="off" required>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <input type="tel" class="form-control" id="phonenumber" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="Phone number" autocomplete="off" required>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <select id="selectdevice" class="form-control" autocomplete="off" required>
+                        <option>Select a service</option>
+                        <option>Device One</option>
+                        <option>Device Two</option>
+                        <option>Device Three</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <input type="text" id="mydatepicker" class="calendar form-control w-100" placeholder="Select Date" autocomplete="off" required>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <select id="seendermalogist" class="form-control" autocomplete="off" required>
+                        <option>Have seen dermatologist before?</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-6">
+                      <div class="position-relative w-100 mytimepicker">
+                        <input type="text" id="mytimepicker" class="time-pickable form-control w-100" placeholder="Select Time" autocomplete="off" required>
+                      </div>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-12">
+                      <textarea class="form-control" id="reasonforappointment" placeholder="Reason for the appointment" rows="5" autocomplete="off" required></textarea>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-lg-12">
+                      <textarea class="form-control" id="additionalcomments" placeholder="Additional Comments (if any)" rows="5" autocomplete="off" required></textarea>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+      
+                    <div class="col-12">
+                      <button class="btn-border w-100" type="submit">Request appointment</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- APPOINTMENT-DETAILS -->
+          <div class="col-lg-6">
+            <div class="appointment-info">
+              <figure class="appointment-thumb">
+                <img src="assets/images/appointment/appointment.png" alt="appointment-thumbnail">
+              </figure>
+
+              <div class="details">
+                <p class="section-text">
+                  Please complete the form and submit it at least [5 days] before your 
+                  desired appointment date to allow us sufficient time to process your 
+                  request and schedule the appointment. Once we receive your form, our 
+                  team will get in touch with you to confirm the appointment details.
+                </p>
+
+                <p class="section-text">
+                  Thank you for choosing our dermatology clinic. We look forward to helping 
+                  you achieve optimal skin health and addressing your dermatological needs. 
+                  If you have any urgent concerns or require immediate medical attention, 
+                  please contact our clinic directly at +880 1454- 454 452
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MYAPPOINTMENT-SECTION END -->
+
+    <!-- NEWSLETTER-START -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-8 mx-lg-auto">
+            <div class="newsletter-content">
+              <div class="newsletter-header">
+                <h5 class="italic-text">Newsletter</h5>
+                <div class="titlebox">
+                  <h2 class="title">
+                    Get the best blog stories into your inbox!
+                  </h2>
+                </div>
+              </div>
+              
+              <div class="newsletter-body">
+                <form class="row g-0 needs-validation" novalidate>    
+                  <div class="col-8">
+                    <input type="email" class="form-control" id="emailaddress" placeholder="Your e-mail address" autocomplete="off" required>
+                    <div class="invalid-feedback">
+                      This field is required
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+    
+                  <div class="col-4">
+                    <button class="btn-border" type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NEWSLETTER-END -->
 
     <!-- BODY-ICON -->
     <figure class="bodyicon">
@@ -474,5 +685,15 @@
   <!-- BACK-TO-TOP-JS -->
   <script src="assets/js/back-top/back-top.js"></script>
   <script src="assets/js/back-top/backtotop.js"></script>
+  <!-- FLATPICKR-JS -->
+  <script src="assets/js/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/js/flatpickr/calendar.js"></script>
+  <!-- CHOICES-JS -->
+  <script src="assets/js/choices/choices.min.js"></script>
+  <script src="assets/js/choices/myselect.js"></script>
+  <!-- TIMEPICKER-JS -->
+  <script src="assets/js/timepicker/timepicker.js"></script>
+  <!-- FORM-VALIDATION -->
+  <script src="assets/js/validation/validation.js"></script>
 </body>
 </html>
