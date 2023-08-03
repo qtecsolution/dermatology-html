@@ -141,3 +141,15 @@
     overflow: hidden;
   }
 }
+
+.social-list {
+  @include list-horizontal;
+  gap: size(16);
+  justify-content: center;
+
+  &-link {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+  }
+}

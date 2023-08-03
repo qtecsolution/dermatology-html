@@ -47,6 +47,13 @@
   background: $overlaybg;
 }
 
+.blogovelay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: $blogovelaybg;
+}
+
 .titleicon {
   @include square(35);
   @include flex-center;

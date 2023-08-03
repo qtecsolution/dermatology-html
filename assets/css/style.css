@@ -1468,6 +1468,90 @@ table tr th, table tr td {
   overflow: hidden;
 }
 
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.social-list-link {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pagination {
+  gap: 0.375rem;
+}
+.pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  border-radius: 0rem;
+}
+.pagination .page-item:first-child {
+  margin-right: 2.125rem;
+}
+.pagination .page-item:last-child {
+  margin-left: 2.125rem;
+}
+.pagination .page-item:hover:not(.active) .page-link {
+  border-color: hsl(19, 89%, 54%);
+  background: hsl(19, 89%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+.pagination .page-item:hover:not(.active) .page-link .icon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.pagination .page-item.active .page-link {
+  background: hsl(19, 89%, 54%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(19, 89%, 54%);
+}
+.pagination .page-link {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 11%);
+  border-color: hsl(0, 0%, 91%);
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  .pagination .page-link {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.pagination .page-link .text {
+  font-family: "Arsenal", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+}
+@media screen and (min-width: 62rem) {
+  .pagination .page-link .text {
+    font-size: 1rem;
+  }
+}
+.pagination .page-link .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pagination .page-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .homebanner {
   width: 100%;
   min-height: 100vh;
@@ -2120,6 +2204,213 @@ table tr th, table tr td {
   gap: 2.25rem;
 }
 
+.blogbanner {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 62rem) {
+  .blogbanner {
+    height: 100vh;
+  }
+}
+.blogbanner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  max-width: 90%;
+  margin-inline: auto;
+}
+@media screen and (min-width: 48rem) {
+  .blogbanner-content {
+    max-width: 100%;
+  }
+}
+.blogbanner-content .categorytext {
+  color: hsl(19, 89%, 54%);
+  font-weight: 700;
+}
+.blogbanner-content h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.blogbanner-content .submitdate {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.blogmain .bodyicon {
+  width: 11.5625rem;
+  height: 23.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: calc(100vh + 3rem);
+  left: -2.5rem;
+  z-index: 10;
+}
+
+.blogdescriptions .blogdetails {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 62rem) {
+  .blogdescriptions .blogdetails {
+    margin-bottom: 6rem;
+  }
+}
+.blogdescriptions .blogdetails-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+@media screen and (min-width: 62rem) {
+  .blogdescriptions .blogdetails-content {
+    gap: 6rem;
+  }
+}
+.blogdescriptions .blogdetails .bloginfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo .title {
+  color: hsl(0, 0%, 20%);
+  font-family: "Arsenal", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo .bloglist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo .bloglist-item {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 75rem) {
+  .blogdescriptions .blogdetails .bloginfo .myinfo .bloglist-item {
+    font-size: 1.125rem;
+  }
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo .instructionlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo .instructionlist-item {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 75rem) {
+  .blogdescriptions .blogdetails .bloginfo .myinfo .instructionlist-item {
+    font-size: 1.125rem;
+  }
+}
+.blogdescriptions .blogdetails .bloginfo .myinfo .listinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.blogdescriptions .blogsingle .blogdetails {
+  max-width: 90%;
+  margin-inline: auto;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .blogdescriptions .blogsingle .blogdetails {
+    max-width: 100%;
+  }
+}
+.blogdescriptions .blogfoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.25rem;
+  text-align: center;
+}
+.blogdescriptions .blogfoot .title {
+  color: hsl(19, 89%, 54%);
+  font-family: "Arsenal", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.blogdescriptions .blogfoot .blogbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-prev,
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-next {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-prev .icon,
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-next .icon {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.25rem;
+}
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-prev .text,
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-next .text {
+  font-weight: 700;
+  color: hsl(0, 0%, 20%);
+}
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-prev:not([disabled]):hover .icon svg path,
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-next:not([disabled]):hover .icon svg path {
+  fill: hsl(19, 89%, 54%);
+}
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-prev:not([disabled]):hover .text,
+.blogdescriptions .blogfoot .blogbuttons .swiper-button-next:not([disabled]):hover .text {
+  color: hsl(19, 89%, 54%);
+}
+.blogdescriptions .alsolike {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.blogdescriptions .alsolike-title {
+  color: hsl(0, 0%, 11%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (min-width: 48rem) {
+  .blogdescriptions .alsolike-title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .blogdescriptions .alsolike-title {
+    font-size: 2.125rem;
+  }
+}
+
 .contactbanner {
   position: relative;
   height: 28.125rem;
@@ -2571,6 +2862,13 @@ table tr th, table tr td {
   inset: 0;
   z-index: 10;
   background: rgba(58, 58, 58, 0.7);
+}
+
+.blogovelay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(58, 58, 58, 0.5);
 }
 
 .titleicon {
