@@ -1567,7 +1567,6 @@ table tr th, table tr td {
 }
 .accordion-button {
   border: none;
-  border-bottom: solid 0.0625rem hsl(0, 0%, 88%);
   padding: 0.9375rem 1.125rem;
   background: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 20%);
@@ -1584,6 +1583,7 @@ table tr th, table tr td {
 .accordion-button:not(.collapsed) {
   background: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 20%);
+  border-bottom: solid 0.0625rem hsl(0, 0%, 88%);
   box-shadow: none;
 }
 .accordion-button:focus {

@@ -26,7 +26,6 @@
   
   &-button {
     border: none;
-    @include border-single(bottom, solid, 1, $inputborder);
     padding: size(15) size(18);
     @include setBgColor($white, $textprimary);
     font-family: $arsenal;
@@ -40,6 +39,7 @@
 
     &:not(.collapsed) {
       @include setBgColor($white, $textprimary);
+      @include border-single(bottom, solid, 1, $inputborder);
       box-shadow: none;
     }
 
