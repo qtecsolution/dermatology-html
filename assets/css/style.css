@@ -2723,6 +2723,36 @@ table tr th, table tr td {
   border-color: hsl(18, 100%, 97%);
 }
 
+.clientreviews {
+  padding: 3rem 0rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .clientreviews {
+    padding: 5rem 0rem 0rem;
+  }
+}
+.clientreviews-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .clientreviews-details {
+    gap: 5rem;
+  }
+}
+.clientreviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.clientreviews-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+
 .servicebanner {
   position: relative;
   height: 28.125rem;
