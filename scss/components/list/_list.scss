@@ -74,12 +74,14 @@
   @include list-vertical;
 
   &-link {
+    @include border-single(bottom, solid, 1, $inputborder);
     color: $black;
     font-family: $raleway;
-    font-size: size(14);
+    font-size: size(12);
     font-weight: 600;
     display: inline-block;
     padding: size(12);
+    @include w100;
     @include transitionscolor;
 
     &:hover:not(.active) {
@@ -89,6 +91,14 @@
     &.active {
       color: $primary;
     }
+  }
+
+  .accordion-button {
+    color: $black;
+    font-family: $raleway;
+    font-size: size(12);
+    font-weight: 600;
+    padding: size(12);
   }
 }
 

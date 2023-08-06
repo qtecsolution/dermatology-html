@@ -25,5 +25,12 @@
     h5 {
       color: $primary;
     }
+
+    .title {
+      color: $black;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 700;
+    }
   }
 }
