@@ -1,3 +1,37 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+.portfoliodetails {
+  padding: size(48) size(0) size(0);
+  
+  @include breakpoint(tab992) {
+    padding: size(80) size(0) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    h5 {
+      color: $primary;
+    }
+
+    .icontitle {
+      &::after {
+        transform: translate(-50%, size(0));
+      }
+    }
+  }
+
+
+}

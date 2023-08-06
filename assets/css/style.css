@@ -2654,6 +2654,75 @@ table tr th, table tr td {
   height: 100%;
 }
 
+.portfoliosection {
+  padding: 3rem 0rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .portfoliosection {
+    padding: 5rem 0rem 0rem;
+  }
+}
+.portfoliosection-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .portfoliosection-content {
+    gap: 5rem;
+  }
+}
+.portfoliosection-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.portfoliosection-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.portfoliosection-header .icontitle::after {
+  transform: translate(-50%, 0rem);
+}
+.portfoliosection .card-gallery-header {
+  height: 15.625rem;
+}
+
+.portfoliodetails {
+  padding: 3rem 0rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .portfoliodetails {
+    padding: 5rem 0rem 0rem;
+  }
+}
+.portfoliodetails-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .portfoliodetails-content {
+    gap: 5rem;
+  }
+}
+.portfoliodetails-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.portfoliodetails-header h5 {
+  color: hsl(19, 89%, 54%);
+}
+.portfoliodetails-header .icontitle::after {
+  transform: translate(-50%, 0rem);
+}
+
 .pricingbanner {
   position: relative;
   height: 28.125rem;
