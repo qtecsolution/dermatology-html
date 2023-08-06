@@ -18,6 +18,16 @@
   }
 }
 
+.faqtext {
+  font-size: size(12);
+  font-style: normal;
+  font-weight: 400;
+
+  @include breakpoint(tab992) {
+    font-size: size(14);
+  }
+}
+
 .sectionlink {
   max-width: size(160);
   @include flex;

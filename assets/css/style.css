@@ -1552,6 +1552,53 @@ table tr th, table tr td {
   box-shadow: none;
 }
 
+.accordion-item {
+  border: none;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 88%);
+}
+.accordion-item:first-of-type .accordion-button {
+  border-radius: 0rem;
+}
+.accordion-item:first-of-type, .accordion-item:last-of-type {
+  border-radius: 0rem;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-radius: 0rem;
+}
+.accordion-button {
+  border: none;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 88%);
+  padding: 0.9375rem 1.125rem;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
+  font-family: "Arsenal", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .accordion-button {
+    font-size: 1rem;
+  }
+}
+.accordion-button:not(.collapsed) {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
+  box-shadow: none;
+}
+.accordion-button:focus {
+  border-color: hsl(0, 0%, 88%);
+}
+.accordion-body {
+  background: hsl(0, 0%, 96%);
+  padding: 1.125rem;
+}
+@media screen and (min-width: 62rem) {
+  .accordion-body {
+    padding: 1.125rem 1.5rem;
+  }
+}
+
 .homebanner {
   width: 100%;
   min-height: 100vh;
@@ -2554,6 +2601,59 @@ table tr th, table tr td {
   min-width: 100%;
 }
 
+.faqsection {
+  padding: 3rem 0rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .faqsection {
+    padding: 5rem 0rem 0rem;
+  }
+}
+.faqsection-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .faqsection-details {
+    gap: 5rem;
+  }
+}
+.faqsection-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.faqsection-header .italic-text {
+  color: hsl(19, 89%, 54%);
+}
+.faqsection-header .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.faqbanner {
+  min-height: 13.75rem;
+  max-height: 36.875rem;
+}
+.faqbanner-thumbnail {
+  min-height: 13.75rem;
+  max-height: 36.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.faqbanner-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
 .pricingbanner {
   position: relative;
   height: 28.125rem;
@@ -2832,6 +2932,17 @@ table tr th, table tr td {
 @media screen and (min-width: 75rem) {
   .section-text {
     font-size: 1.125rem;
+  }
+}
+
+.faqtext {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .faqtext {
+    font-size: 0.875rem;
   }
 }
 
