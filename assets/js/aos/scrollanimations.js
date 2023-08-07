@@ -1,3 +1,5 @@
 AOS.init({
-  easing: 'ease-in-sine'
+  duration: 1000,
+  easing: 'ease-out-back',
+  delay: 150
 });

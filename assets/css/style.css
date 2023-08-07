@@ -2511,6 +2511,10 @@ table tr th, table tr td {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
 }
+.blogbanner-content .blogtitle {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
 .blogbanner-content .submitdate {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
