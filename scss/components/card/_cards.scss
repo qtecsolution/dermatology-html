@@ -423,3 +423,90 @@
     }
   }
 }
+
+.doctorcard {
+  @include flex-column;
+  gap: size(24);
+  @include h100;
+
+  &-header {
+    @include w100;
+    min-height: size(200);
+    max-height: size(300);
+    @include flex-center;
+    overflow: hidden;
+
+    .doctor-thumbnail {
+      @include wh100;
+      min-height: size(200);
+      max-height: size(300);
+      @include flex-center;
+      overflow: hidden;
+      position: relative;
+      
+      &::before,
+      &::after {
+        content: '';
+        background: rgba($black, 0.1);
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        transform: scale3d(0, 0, 1);
+        transition: transform .3s ease-out 0s;
+      }
+
+      &::before {
+        transform-origin: left top;
+      }
+
+      &::after {
+        transform-origin: right bottom;
+      }
+
+      img {
+        @include wh100;
+        @include transitiontransform;
+      }
+
+      &:hover,
+      &:focus {
+        &::before,
+        &::after {
+          transform: scale3d(1, 1, 1);
+        }
+
+        img {
+          @include scale(1.1);
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(8);
+
+    .docname {
+      color: $textprimary;
+      font-family: $raleway;
+      font-size: size(16);
+      font-style: normal;
+      font-weight: 700;
+      @include line-clamp;
+      @include transitionscolor;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .docdesignation {
+      color: $textprimary;
+      font-family: $arsenal;
+      font-size: size(13);
+      font-style: normal;
+      font-weight: 700;
+      @include line-clamp;
+    }
+  }
+}
