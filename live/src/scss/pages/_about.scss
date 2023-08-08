@@ -1,0 +1,140 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.aboutus {
+  padding: size(48) size(0) size(0);
+  
+  @include breakpoint(tab992) {
+    padding: size(80) size(0) size(0);
+  }
+
+  &-details {
+    @include flex-column;
+    gap: size(120);
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(80);
+  
+    .aboutinfo {
+      @include flex-center-column;
+      gap: size(16);
+      text-align: center;
+
+      h5 {
+        color: $primary;
+      }
+
+      .title {
+        color: $black;
+        font-size: size(24);
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+
+    .about-thumbnail {
+      @include flex-center;
+      @include w100;
+      min-height: size(180);
+      max-height: size(650);
+      overflow: hidden;
+      position: relative;
+
+      @include breakpoint(mobile500) {
+        min-height: size(260);
+      }
+
+      @include breakpoint(mobile768) {
+        min-height: size(340);
+      }
+
+      @include breakpoint(tab992) {
+        min-height: size(400);
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        background: rgba($black, 0.1);
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        transform: scale3d(0, 0, 1);
+        transition: transform .3s ease-out 0s;
+      }
+
+      &::before {
+        transform-origin: left top;
+      }
+
+      &::after {
+        transform-origin: right bottom;
+      }
+
+      img {
+        @include wh100;
+        @include transitiontransform;
+      }
+
+      &:hover,
+      &:focus {
+        &::before,
+        &::after {
+          transform: scale3d(1, 1, 1);
+        }
+
+        img {
+          @include scale(1.1);
+        }
+      }
+    }
+  }
+
+  &-body {
+    .aboutusinfo {
+      @include flex-column;
+      gap: size(32);
+
+      &-header {
+        @include flex-column;
+        gap: size(24);
+  
+        h5 {
+          color: $primary;
+        }
+  
+        .title {
+          color: $black;
+          font-size: size(24);
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+
+      &-body {
+        .aboutlist {
+          &-item {
+            font-size: size(15);
+            font-style: normal;
+            font-weight: 700;
+          
+            @include breakpoint(desktop1200) {
+              font-size: size(18);
+            }
+          }
+        }
+      }
+    }
+
+    .aboutinfothumb {
+      @include wh100;
+      @include flex-center;
+
+      img {
+        @include wh100;
+      }
+    }
+  }
+}

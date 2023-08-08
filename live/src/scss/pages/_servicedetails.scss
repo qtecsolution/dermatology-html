@@ -1,0 +1,155 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.servicedetails {
+  position: relative;
+  z-index: 100;
+
+  &-content {
+    @include flex-column;
+    gap: size(80);
+    overflow: hidden;
+  }
+
+  .servicesingle {
+    @include flex-column;
+    gap: size(64);
+    position: relative;
+    z-index: 100;
+
+    .service-thumb {
+      @include w100;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.1);
+        }
+      }
+    }
+
+    .leftcontent,
+    .rightcontent {
+      @include flex-column;
+      gap: size(48);
+    }
+
+    .leftcontent {
+      .contentbox,
+      .procedure,
+      .benefits {
+        @include flex-column;
+        gap: size(32);
+      }
+
+      .contentbox {
+        .title {
+          color: $black;
+          font-size: size(24);
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+
+      .procedure {
+        .title {
+          color: $black;
+          font-size: size(24);
+          font-style: normal;
+          font-weight: 700;
+        }
+
+        .procedurelist {
+          @include list-vertical;
+          gap: size(20);
+
+          &-item {
+            font-size: size(15);
+            font-style: normal;
+            font-weight: 400;
+          
+            @include breakpoint(desktop1200) {
+              font-size: size(18);
+            }
+          }
+        }
+      }
+
+      .benefits {
+        .title {
+          color: $black;
+          font-size: size(24);
+          font-style: normal;
+          font-weight: 700;
+        }
+
+        .benefitslist {
+          @include flex-column;
+          gap: size(8);
+          
+          &-item {
+            font-size: size(15);
+            font-style: normal;
+            font-weight: 400;
+          
+            @include breakpoint(desktop1200) {
+              font-size: size(18);
+            }
+          }
+        }
+      }
+    }
+    
+    .rightcontent {
+      .popular {
+        @include flex-column;
+        gap: size(32);
+
+        &-title {
+          color: $black;
+          font-size: size(24);
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .sliderbuttons {
+    @include flex-center-between;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      @include flex-center-vert;
+      gap: size(4);
+
+      .icon {
+        @include square(16);
+        margin-top: size(-4);
+      }
+
+      .text {
+        font-weight: 700;
+        color: $textprimary;
+      }
+
+      @include hover {
+        .icon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+
+        .text {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

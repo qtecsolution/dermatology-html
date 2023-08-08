@@ -1,0 +1,41 @@
+@use "../../global"as *;
+@use "../../partials"as *;
+
+.modal {
+  &-content {
+    @include radius(8);
+  }
+
+  &-header {
+    border-bottom: 0;
+
+    .modal-title {
+      color: $tabletext;
+      font-family: $raleway;
+      font-size: size(16);
+      font-weight: 600;
+    }
+
+    .btn-close {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+      opacity: 1;
+
+      svg {
+        @include wh100;
+        @include transitiontransform;
+      }
+
+      @include hover {
+        svg {
+          @include rotate(90);
+
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+}

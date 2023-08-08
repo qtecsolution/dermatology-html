@@ -1,0 +1,31 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.languageform {
+  @include flex-center-vert;
+  gap: size(8);
+
+  .language {
+    &-input {
+      &:checked ~ .language-label {
+        color: $black;
+      }
+    }
+
+    &-label {
+      cursor: pointer;
+      color: $textlight;
+      font-family: $raleway;
+      font-size: size(13);
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+
+  .divider {
+    width: size(2);
+    height: size(13);
+    @include flex-center;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,102 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.footer {
+  background: $footerbg;
+  padding: size(80) size(0) size(48);
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      text-align: left;
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(24);
+
+    .title {
+      color: $textlight;
+      font-family: $raleway;
+      font-size: size(16);
+      font-style: normal;
+      font-weight: 600;
+
+      @include breakpoint(desktop1200) {
+        font-size: size(18);
+      }
+    }
+  }
+
+  &-info {
+    @include flex-column;
+    gap: size(24);
+
+    @include breakpoint(tab992) {
+      gap: size(48);
+    }
+
+    .logo {
+      margin-inline: auto;
+  
+      @include breakpoint(tab992) {
+        margin: 0;
+      }
+    }
+
+    .textinfo {
+      @include breakpoint(mobile768) {
+        max-width: 75%;
+        margin-inline: auto;
+      }
+
+      @include breakpoint(tab992) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .footer-text {
+      color: $textlight;
+      font-size: size(15);
+      font-style: normal;
+      font-weight: 400;
+
+      @include breakpoint(desktop1200) {
+        font-size: size(18);
+      }
+    }
+  }
+
+  .booking {
+    width: size(200);
+    margin-inline: auto;
+
+    @include breakpoint(tab992) {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  .copyright {
+    @include border-single(top, solid, 1, $textlight);
+    @include flex-center;
+    text-align: center;
+    padding-top: size(48);
+
+    &-text {
+      color: $textlight;
+      font-size: size(15);
+      font-style: normal;
+      font-weight: 400;
+
+      @include breakpoint(desktop1200) {
+        font-size: size(18);
+      }
+    }
+  }
+}

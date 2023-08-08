@@ -1,0 +1,103 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.italic-text {
+  font-family: $caveat;
+  font-size: size(24);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.section-text {
+  font-size: size(15);
+  font-style: normal;
+  font-weight: 400;
+
+  @include breakpoint(desktop1200) {
+    font-size: size(18);
+  }
+}
+
+.faqtext {
+  font-size: size(12);
+  font-style: normal;
+  font-weight: 400;
+
+  @include breakpoint(tab992) {
+    font-size: size(14);
+  }
+}
+
+.sectionlink {
+  max-width: size(160);
+  @include flex;
+}
+
+.sectlink {
+  max-width: size(250);
+  @include flex;
+}
+
+.videobox {
+  @include w100;
+  height: size(380);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba($black, 0.6);
+}
+
+.bannerovelay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: $overlaybg;
+}
+
+.blogovelay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: $blogovelaybg;
+}
+
+.titleicon {
+  @include square(35);
+  @include flex-center;
+  overflow: hidden;        
+}
+
+.mrgnbtm {
+  margin-bottom: size(64);
+
+  @include breakpoint(tab992) {
+    margin-bottom: 0;
+  }
+}
+
+.icontitle {
+  position: relative;
+
+  &::after {
+    content: url("data:image/svg+xml, %3Csvg width='36' height='35' viewBox='0 0 36 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.355469' width='35' height='35' fill='%23F26522'/%3E%3C/svg%3E");
+    position: absolute;
+    bottom: size(-15);
+    z-index: -1;
+    transform: translate(-80%, size(2));
+  }
+}
+
+.parallax {
+  position: relative;
+  transform: translateY(size(40));
+  opacity: 1;
+  transition: 1s all ease;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

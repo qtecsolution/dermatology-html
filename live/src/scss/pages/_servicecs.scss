@@ -1,0 +1,21 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.servicebanner {
+  position: relative;
+  height: size(450);
+  @include flex-center;
+  margin-bottom: size(80);
+
+  &-content {
+    @include flex-center-column;
+    gap: size(20);
+    position: relative;
+    z-index: 100;
+
+    h1 {
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}

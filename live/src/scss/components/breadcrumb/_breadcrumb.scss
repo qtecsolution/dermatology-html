@@ -1,0 +1,29 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.breadcrumb {
+  @include flex-center-vert;
+  gap: size(4);
+  margin-bottom: 0;
+
+  &-item {
+    color: $white;
+    font-family: $arsenal;
+    font-size: size(16);
+    font-weight: 400;
+    
+    @include breakpoint(mobile768) {
+      font-size: size(20);
+    }
+
+    a {
+      color: inherit;
+      font: inherit;
+    }
+
+    &.active {
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}
