@@ -44,12 +44,14 @@ button,
 
 .btn-book {
   @include setBgColor($primary, $white);
+  @include border(solid, 1, $primary);
   font-family: $raleway;
   font-size: size(13);
   font-weight: 700;
   @include flex-center;
   padding: size(15.25) size(14);
   text-align: center;
+  @include transitionsall;
 
   @include breakpoint(desktop1200) {
     padding: size(15.25) size(20);
@@ -57,6 +59,10 @@ button,
 
   @include breakpoint(desktop1400) {
     padding: size(15.25) size(40);
+  }
+
+  @include hover {
+    @include setBgColor(transparent, $primary);
   }
 }
 
@@ -125,7 +131,8 @@ button,
   }
 
   @include hover {
-    @include setBgColor($textgray, $black);
+    @include setBgColor($primary, $white);
+    border-color: $primary;
   }
 }
 

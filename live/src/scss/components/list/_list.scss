@@ -149,6 +149,14 @@
     @include square(16);
     @include flex-center;
     overflow: hidden;
+
+    @include hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
   }
 }
 
@@ -161,5 +169,24 @@
     @include square(16);
     @include flex-center;
     overflow: hidden;
+
+    @include hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    &.copylink {
+      @include hover {
+        svg {
+          path {
+            fill: none;
+            stroke: $primary;
+          }
+        }
+      }
+    }
   }
 }

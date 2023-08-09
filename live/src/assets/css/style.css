@@ -485,6 +485,7 @@ button:focus,
 .btn-book {
   background: hsl(19, 89%, 54%);
   color: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(19, 89%, 54%);
   font-family: "Raleway", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
@@ -493,6 +494,7 @@ button:focus,
   justify-content: center;
   padding: 0.953125rem 0.875rem;
   text-align: center;
+  transition: all 350ms ease-in-out;
 }
 @media screen and (min-width: 75rem) {
   .btn-book {
@@ -503,6 +505,10 @@ button:focus,
   .btn-book {
     padding: 0.953125rem 2.5rem;
   }
+}
+.btn-book:not([disabled]):hover {
+  background: transparent;
+  color: hsl(19, 89%, 54%);
 }
 
 .btn-banner {
@@ -581,8 +587,9 @@ button:focus,
   }
 }
 .btn-border:not([disabled]):hover {
-  background: hsl(0, 0%, 78%);
-  color: hsl(0, 0%, 0%);
+  background: hsl(19, 89%, 54%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(19, 89%, 54%);
 }
 
 .swiper-button-next,
@@ -1635,6 +1642,9 @@ table tr th, table tr td {
   justify-content: center;
   overflow: hidden;
 }
+.listsocial-link:not([disabled]):hover svg path {
+  fill: hsl(19, 89%, 54%);
+}
 
 .social-list {
   margin: 0;
@@ -1652,6 +1662,13 @@ table tr th, table tr td {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.social-list-link:not([disabled]):hover svg path {
+  fill: hsl(19, 89%, 54%);
+}
+.social-list-link.copylink:not([disabled]):hover svg path {
+  fill: none;
+  stroke: hsl(19, 89%, 54%);
 }
 
 .pagination {
@@ -3146,6 +3163,9 @@ table tr th, table tr td {
     gap: 1rem;
   }
 }
+.portfoliodetails-body .portfolio-info-header .headinfo .rightinfo .social-list-link:not([disabled]):hover svg path {
+  fill: hsl(19, 89%, 54%);
+}
 
 .pricingbanner {
   position: relative;
@@ -3602,6 +3622,9 @@ table tr th, table tr td {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.doctordetails-body .docinfo .sociallist-link:not([disabled]):hover svg path {
+  fill: hsl(19, 89%, 54%);
 }
 
 .errormain {

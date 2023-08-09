@@ -150,6 +150,14 @@
           @include square(18);
           @include flex-center;
           overflow: hidden;
+
+          @include hover {
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
         }
       }
     }

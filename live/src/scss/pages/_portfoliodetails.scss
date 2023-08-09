@@ -131,6 +131,16 @@
               @include breakpoint(mobile768) {
                 gap: size(16);
               }
+
+              &-link {
+                @include hover {
+                  svg {
+                    path {
+                      fill: $primary;
+                    }
+                  }
+                }
+              }
             }
           }
         }
