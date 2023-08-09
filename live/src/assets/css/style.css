@@ -2041,7 +2041,12 @@ table tr th, table tr td {
 }
 @media screen and (min-width: 75rem) {
   .experiences-detail {
-    gap: 5rem;
+    gap: 6rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .experiences-detail {
+    gap: 7.5rem;
   }
 }
 .experiences .experience-picture {
@@ -2050,11 +2055,16 @@ table tr th, table tr td {
 .experiences .experience-picture .experience-thumbnail {
   border-radius: 0rem 37.5rem 0rem 0rem;
   width: 100%;
-  height: 18.75rem;
+  height: 27.1875rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+@media screen and (min-width: 87.5rem) {
+  .experiences .experience-picture .experience-thumbnail {
+    height: 27.1875rem;
+  }
 }
 .experiences .experience-picture .experience-thumbnail img {
   width: 100%;
@@ -2076,7 +2086,7 @@ table tr th, table tr td {
 .experiences .experience-detail {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 .experiences .experience-detail .title {
   color: hsl(0, 0%, 0%);
@@ -3204,11 +3214,21 @@ table tr th, table tr td {
 
 .pricingbanner {
   position: relative;
-  height: 28.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  height: 10rem;
+}
+@media screen and (min-width: 48rem) {
+  .pricingbanner {
+    height: 15.625rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .pricingbanner {
+    height: 28.125rem;
+  }
 }
 .pricingbanner-content {
   display: flex;
@@ -3309,11 +3329,21 @@ table tr th, table tr td {
 
 .servicebanner {
   position: relative;
-  height: 28.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  height: 10rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicebanner {
+    height: 15.625rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebanner {
+    height: 28.125rem;
+  }
 }
 .servicebanner-content {
   display: flex;

@@ -256,7 +256,11 @@
     gap: size(48);
 
     @include breakpoint(desktop1200) {
-      gap: size(80);
+      gap: size(96);
+    }
+
+    @include breakpoint(desktop1400) {
+      gap: size(120);
     }
   }
 
@@ -266,9 +270,13 @@
     .experience-thumbnail {
       border-radius: size(0) size(600) size(0) size(0);
       @include w100;
-      height: size(300);
+      height: size(435);
       @include flex-center;
       overflow: hidden;
+
+      @include breakpoint(desktop1400) {
+        height: size(435);
+      }
 
       img {
         @include wh100;
@@ -296,7 +304,7 @@
 
   .experience-detail {
     @include flex-column;
-    gap: size(24);
+    gap: size(40);
 
     .title {
       color: $black;
