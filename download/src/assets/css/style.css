@@ -349,6 +349,7 @@ h5,
 h6 {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  text-shadow: balance;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
   background: hsl(19, 89%, 54%);
@@ -635,6 +636,11 @@ button:focus,
   overflow: hidden;
   position: relative;
 }
+@media screen and (min-width: 87.5rem) {
+  .card-service-header .service-thumbnail {
+    height: 26.875rem;
+  }
+}
 .card-service-header .service-thumbnail::before, .card-service-header .service-thumbnail::after {
   content: "";
   background: rgba(0, 0, 0, 0.1);
@@ -701,6 +707,60 @@ button:focus,
   color: hsl(0, 0%, 20%);
 }
 
+@media screen and (min-width: 87.5rem) {
+  .service-1 .card-service-header .service-thumbnail {
+    height: 26.875rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-2 .card-service-header .service-thumbnail {
+    height: 34.375rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-3 .card-service-header .service-thumbnail {
+    height: 26.875rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-4 .card-service-header .service-thumbnail {
+    height: 26.875rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-5 .card-service-header .service-thumbnail {
+    height: 34.375rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-6 .card-service-header .service-thumbnail {
+    height: 26.875rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-7 .card-service-header .service-thumbnail {
+    height: 34.375rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-8 .card-service-header .service-thumbnail {
+    height: 26.875rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .service-9 .card-service-header .service-thumbnail {
+    height: 34.375rem;
+  }
+}
+
 .card-gallery {
   display: flex;
   flex-direction: column;
@@ -711,6 +771,11 @@ button:focus,
   width: 100%;
   height: 22.5rem;
   overflow: hidden;
+}
+@media screen and (min-width: 87.5rem) {
+  .card-gallery-header {
+    height: 32.5rem;
+  }
 }
 .card-gallery-body {
   display: flex;
@@ -808,6 +873,11 @@ button:focus,
   height: 13.125rem;
   overflow: hidden;
 }
+@media screen and (min-width: 87.5rem) {
+  .cardblog-header {
+    height: 19.0625rem;
+  }
+}
 .cardblog-thumbnail {
   position: relative;
   width: 100%;
@@ -851,6 +921,9 @@ button:focus,
 .cardblog-body .blogcategory {
   color: hsl(19, 89%, 54%);
   font-weight: 700;
+}
+.cardblog-body .blogcategory.textprimary {
+  color: hsl(0, 0%, 20%);
 }
 .cardblog-body .blogtitle {
   color: hsl(0, 0%, 0%);
@@ -1739,14 +1812,19 @@ table tr th, table tr td {
 .mainsection .bodyicon {
   width: 11.5625rem;
   height: 23.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   position: absolute;
   top: 3rem;
   left: -2.5rem;
   z-index: 10;
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .mainsection .bodyicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .facilities {
@@ -1805,7 +1883,7 @@ table tr th, table tr td {
 .facilities-detail .appointmentinfo {
   display: flex;
   align-items: center;
-  max-width: 13.25rem;
+  max-width: 14.5rem;
   overflow: hidden;
 }
 
@@ -1838,6 +1916,13 @@ table tr th, table tr td {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 2rem;
+  background: hsl(0, 0%, 96%);
+}
+@media screen and (min-width: 87.5rem) {
+  .ourpractice-details {
+    padding: 4rem;
+  }
 }
 .ourpractice-header {
   display: flex;
@@ -1866,13 +1951,26 @@ table tr th, table tr td {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
   position: relative;
   overflow: hidden;
+  min-height: 43.375rem;
+  max-height: 48.125rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .ourpractice .practice-thumbnail {
+    min-height: 47.375rem;
+  }
 }
 .ourpractice .practice-thumbnail img {
   width: 100%;
   height: 100%;
+  min-height: 43.375rem;
+  max-height: 48.125rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .ourpractice .practice-thumbnail img {
+    min-height: 47.375rem;
+  }
 }
 .ourpractice .practice-thumbnail .thumboverlay {
   background: rgba(0, 0, 0, 0.4);
@@ -1961,7 +2059,7 @@ table tr th, table tr td {
 .experiences .experience-detail {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 .experiences .experience-detail .title {
   color: hsl(0, 0%, 0%);
@@ -1991,6 +2089,9 @@ table tr th, table tr td {
   gap: 2rem;
   text-align: center;
 }
+.bookappointment-header .icontitle::after {
+  transform: translate(-70%, 0rem);
+}
 .bookappointment-body {
   display: flex;
   align-items: center;
@@ -2016,7 +2117,7 @@ table tr th, table tr td {
   color: hsl(19, 89%, 54%);
 }
 .ourgallery-header .icontitle::after {
-  transform: translate(-50%, 0rem);
+  transform: translate(-70%, 0rem);
 }
 
 .ourdoctors {
@@ -2113,7 +2214,7 @@ table tr th, table tr td {
   color: hsl(0, 0%, 100%);
 }
 .ourdoctors .doctorinfo .detail .learnmorebox {
-  max-width: 10rem;
+  max-width: 12.5rem;
   display: flex;
 }
 .ourdoctors .sliderbuttons {
@@ -2190,7 +2291,7 @@ table tr th, table tr td {
   color: hsl(19, 89%, 54%);
 }
 .ratingsec-header .icontitle::after {
-  transform: translate(-50%, 0rem);
+  transform: translate(-165%, 0rem);
 }
 
 .blogsec-content {
@@ -2419,7 +2520,6 @@ table tr th, table tr td {
 }
 .myappointment-body .appointmentform .choices[data-type*=select-one].is-open::after {
   border: none;
-  margin-top: 0;
   transform: rotate(180deg);
   margin-top: -0.625rem;
 }
@@ -2909,8 +3009,11 @@ table tr th, table tr td {
 .portfoliosection-header h5 {
   color: hsl(19, 89%, 54%);
 }
-.portfoliosection-header .icontitle::after {
-  transform: translate(-50%, 0rem);
+.portfoliosection-header .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
 }
 .portfoliosection .card-gallery-header {
   height: 15.625rem;
@@ -3565,18 +3668,22 @@ table tr th, table tr td {
 }
 
 .sectionlink {
-  max-width: 10rem;
+  max-width: 15rem;
   display: flex;
 }
 
 .sectlink {
-  max-width: 15.625rem;
+  max-width: 17.5rem;
   display: flex;
 }
 
 .videobox {
   width: 100%;
   height: 23.75rem;
+}
+
+.textprimary {
+  color: hsl(0, 0%, 20%);
 }
 
 .overlay {
@@ -3641,8 +3748,8 @@ table tr th, table tr td {
 }
 
 /*============================== 
-	- Template Name: MR.Q - Responsive HTML Personal Portfolio Template
+	- Template Name: Dermatology HTML Template
 	- Author: Qtec Solution Limited
 	- Version: 1.0
-	- Website: https://www.qtecsolution.com/
+	- Website: https://www.qtecsolution.com
 ================================= */

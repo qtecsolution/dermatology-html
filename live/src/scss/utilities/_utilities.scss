@@ -29,18 +29,22 @@
 }
 
 .sectionlink {
-  max-width: size(160);
+  max-width: size(240);
   @include flex;
 }
 
 .sectlink {
-  max-width: size(250);
+  max-width: size(280);
   @include flex;
 }
 
 .videobox {
   @include w100;
   height: size(380);
+}
+
+.textprimary {
+  color: $textprimary;
 }
 
 .overlay {

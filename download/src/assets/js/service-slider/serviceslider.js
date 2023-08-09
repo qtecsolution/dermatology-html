@@ -1,6 +1,6 @@
 const serviceSlider = new Swiper(".serviceSlider", {
   loop: true,
-  centeredSlides: true,
+  centeredSlides: false,
   loopedSlides: 1,
   slidesPerView: 1,
   pagination: false,

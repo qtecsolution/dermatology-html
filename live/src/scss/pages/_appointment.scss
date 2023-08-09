@@ -80,7 +80,6 @@
   
       .choices[data-type*=select-one].is-open::after {
         border: none;
-        margin-top: 0;
         @include rotate(180);
         margin-top: size(-10);
       }

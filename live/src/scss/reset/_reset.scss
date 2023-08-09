@@ -133,6 +133,7 @@ h5,
 h6 {
   margin: 0;
   font-family: $raleway;
+  text-shadow: balance;
 
   &::selection {
     @include setBgColor($primary, $white);

@@ -26,10 +26,11 @@
       color: $primary;
     }
 
-    .icontitle {
-      &::after {
-        transform: translate(-50%, size(0));
-      }
+    .title {
+      color: $black;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 700;
     }
   }
 

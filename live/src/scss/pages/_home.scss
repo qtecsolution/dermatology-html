@@ -43,12 +43,16 @@
   .bodyicon {
     width: size(185);
     height: size(372);
-    @include flex-center;
     overflow: hidden;
     position: absolute;
     top: size(48);
     left: size(-40);
     z-index: 10;
+    display: none;
+
+    @include breakpoint(tab992) {
+      @include flex-center;
+    }
   }
 }
 
@@ -104,7 +108,7 @@
 
     .appointmentinfo {
       @include flex-center-vert;
-      max-width: size(212);
+      max-width: size(232);
       overflow: hidden;
     }
   }
@@ -141,6 +145,12 @@
   &-details {
     @include flex-column;
     gap: size(48);
+    padding: size(32);
+    background: $inputbg;
+
+    @include breakpoint(desktop1400) {
+      padding: size(64);
+    }
   }
 
   &-header {
@@ -170,12 +180,24 @@
 
   .practice-thumbnail {
     @include flex-center;
-    @include wh100;
+    @include w100;
     position: relative;
     overflow: hidden;
+    min-height: size(694);
+    max-height: size(770);
+
+    @include breakpoint(desktop1400) {
+      min-height: size(758);
+    }
 
     img {
       @include wh100;
+      min-height: size(694);
+      max-height: size(770);
+
+      @include breakpoint(desktop1400) {
+        min-height: size(758);
+      }
     }
 
     .thumboverlay {
@@ -274,7 +296,7 @@
 
   .experience-detail {
     @include flex-column;
-    gap: size(40);
+    gap: size(24);
 
     .title {
       color: $black;
@@ -299,6 +321,12 @@
     @include flex-center-column;
     gap: size(32);
     text-align: center;
+
+    .icontitle {
+      &::after {
+        transform: translate(-70%, size(0));
+      }
+    }
   }
 
   &-body {
@@ -326,7 +354,7 @@
 
     .icontitle {
       &::after {
-        transform: translate(-50%, size(0));
+        transform: translate(-70%, size(0));
       }
     }
   }
@@ -421,7 +449,7 @@
       }
 
       .learnmorebox {
-        max-width: size(160);
+        max-width: size(200);
         @include flex;
       }
     }
@@ -498,7 +526,7 @@
 
     .icontitle {
       &::after {
-        transform: translate(-50%, size(0));
+        transform: translate(-165%, size(0));
       }
     }
   }
