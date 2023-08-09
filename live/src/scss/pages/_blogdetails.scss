@@ -3,9 +3,17 @@
 
 .blogbanner {
   position: relative;
-  height: 60vh;
   @include flex-center;
   margin-bottom: size(80);
+  height: size(160);
+
+  @include breakpoint(mobile768) {
+    height: size(250);
+  }
+
+  @include breakpoint(tab992) {
+    height: size(450);
+  }
 
   @include breakpoint(tab992) {
     height: 100vh;
@@ -50,12 +58,16 @@
   .bodyicon {
     width: size(185);
     height: size(372);
-    @include flex-center;
     overflow: hidden;
     position: absolute;
     top: calc(100vh + size(48));
     left: size(-40);
     z-index: 10;
+    display: none;
+
+    @include breakpoint(tab992) {
+      @include flex-center;
+    }
   }
 }
 

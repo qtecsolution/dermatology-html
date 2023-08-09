@@ -2470,23 +2470,33 @@ table tr th, table tr td {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
+  position: relative;
+  z-index: 100;
 }
 .myappointment-header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  z-index: 100;
 }
 .myappointment-header h5 {
   color: hsl(19, 89%, 54%);
+  position: relative;
+  z-index: 100;
 }
 .myappointment-header .title {
   color: hsl(0, 0%, 0%);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
+  position: relative;
+  z-index: 100;
 }
 .myappointment-body {
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 100;
 }
 @media screen and (min-width: 62rem) {
   .myappointment-body {
@@ -2592,11 +2602,21 @@ table tr th, table tr td {
 
 .blogbanner {
   position: relative;
-  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  height: 10rem;
+}
+@media screen and (min-width: 48rem) {
+  .blogbanner {
+    height: 15.625rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .blogbanner {
+    height: 28.125rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .blogbanner {
@@ -2640,14 +2660,19 @@ table tr th, table tr td {
 .blogmain .bodyicon {
   width: 11.5625rem;
   height: 23.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   position: absolute;
   top: calc(100vh + 3rem);
   left: -2.5rem;
   z-index: 10;
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .blogmain .bodyicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .blogdescriptions .blogdetails {
@@ -2803,11 +2828,21 @@ table tr th, table tr td {
 
 .contactbanner {
   position: relative;
-  height: 28.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  height: 10rem;
+}
+@media screen and (min-width: 48rem) {
+  .contactbanner {
+    height: 15.625rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .contactbanner {
+    height: 28.125rem;
+  }
 }
 .contactbanner-content {
   display: flex;
