@@ -2470,23 +2470,33 @@ table tr th, table tr td {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
+  position: relative;
+  z-index: 100;
 }
 .myappointment-header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  z-index: 100;
 }
 .myappointment-header h5 {
   color: hsl(19, 89%, 54%);
+  position: relative;
+  z-index: 100;
 }
 .myappointment-header .title {
   color: hsl(0, 0%, 0%);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
+  position: relative;
+  z-index: 100;
 }
 .myappointment-body {
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 100;
 }
 @media screen and (min-width: 62rem) {
   .myappointment-body {
