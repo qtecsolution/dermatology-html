@@ -1861,6 +1861,10 @@ table tr th, table tr td {
     justify-content: center;
   }
 }
+.mainsection .bodyicon.centericon {
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .facilities {
   padding-top: 5rem;
@@ -3604,6 +3608,11 @@ table tr th, table tr td {
   position: relative;
   min-height: 15rem;
   max-height: 43.125rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .doctordetails-body .doctor-thumb {
+    min-height: 43.125rem;
+  }
 }
 .doctordetails-body .doctor-thumb::before, .doctordetails-body .doctor-thumb::after {
   content: "";

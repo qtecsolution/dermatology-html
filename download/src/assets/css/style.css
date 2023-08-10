@@ -439,6 +439,15 @@ iframe {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
 }
+.breadcrumb .arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0.125rem;
+}
 
 button,
 [type=button],
@@ -781,8 +790,12 @@ button:focus,
 }
 @media screen and (min-width: 87.5rem) {
   .card-gallery-header {
-    height: 32.5rem;
+    height: 32.625rem;
   }
+}
+.card-gallery-header img {
+  width: 100%;
+  height: 100%;
 }
 .card-gallery-body {
   display: flex;
@@ -1791,6 +1804,11 @@ table tr th, table tr td {
   align-items: center;
   position: relative;
 }
+@media screen and (min-width: 87.5rem) {
+  .homebanner {
+    min-height: 53.3125rem;
+  }
+}
 .homebanner-content {
   display: flex;
   flex-direction: column;
@@ -1842,6 +1860,10 @@ table tr th, table tr td {
     align-items: center;
     justify-content: center;
   }
+}
+.mainsection .bodyicon.centericon {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .facilities {
@@ -2159,6 +2181,7 @@ table tr th, table tr td {
 @media screen and (min-width: 87.5rem) {
   .ourdoctors {
     padding: 10rem 0rem 7.8125rem;
+    min-height: 89.6875rem;
   }
 }
 .ourdoctors-content {
@@ -2184,17 +2207,10 @@ table tr th, table tr td {
 .ourdoctors .doctorinfo {
   position: relative;
 }
-.ourdoctors .doctorinfo .doctor-thumbnail {
+.ourdoctors .doctorinfo .thumbicon {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.ourdoctors .doctorinfo .doctor-thumbnail img {
-  width: 100%;
-  height: 100%;
-}
-.ourdoctors .doctorinfo .doctor-thumbnail .icon {
+.ourdoctors .doctorinfo .thumbicon .icon {
   width: 10.125rem;
   height: 10.625rem;
   display: flex;
@@ -2205,6 +2221,18 @@ table tr th, table tr td {
   bottom: -5.3125rem;
   right: -5.0625rem;
   z-index: 200;
+}
+.ourdoctors .doctorinfo .doctor-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 29.625rem;
+  overflow: hidden;
+}
+.ourdoctors .doctorinfo .doctor-thumbnail img {
+  width: 100%;
+  height: 100%;
 }
 .ourdoctors .doctorinfo .detail {
   position: relative;
@@ -3580,6 +3608,11 @@ table tr th, table tr td {
   position: relative;
   min-height: 15rem;
   max-height: 43.125rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .doctordetails-body .doctor-thumb {
+    min-height: 43.125rem;
+  }
 }
 .doctordetails-body .doctor-thumb::before, .doctordetails-body .doctor-thumb::after {
   content: "";

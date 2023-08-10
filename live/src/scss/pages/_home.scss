@@ -57,6 +57,11 @@
     @include breakpoint(tab992) {
       @include flex-center;
     }
+
+    &.centericon {
+      top: 50%;
+      @include translateY(-50%);
+    }
   }
 }
 

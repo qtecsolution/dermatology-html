@@ -45,6 +45,10 @@
       min-height: size(240);
       max-height: size(690);
       
+      @include breakpoint(desktop1400) {
+        min-height: size(690);
+      }
+      
       &::before,
       &::after {
         content: '';
