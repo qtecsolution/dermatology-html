@@ -26,4 +26,11 @@
       font-weight: 700;
     }
   }
+
+  .arrow {
+    @include square(12.8);
+    @include flex-center;
+    overflow: hidden;
+    margin-top: size(2);
+  }
 }

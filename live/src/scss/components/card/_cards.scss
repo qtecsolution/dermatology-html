@@ -198,7 +198,11 @@
     overflow: hidden;
 
     @include breakpoint(desktop1400) {
-      height: size(520);
+      height: size(522);
+    }
+
+    img {
+      @include wh100;
     }
   }
 

@@ -4,10 +4,12 @@ const doctorSlider = new Swiper(".doctorSlider", {
     disableOnInteraction: true,
   },
   loop: true,
-  centeredSlides: false,
+  speed: 600,
+  parallax: true,
   loopedSlides: 1,
   spaceBetween: 30,
   slidesPerView: "auto",
+  centeredSlides: true,
   pagination: false,
   navigation: {
     nextEl: ".swiper-button-next",

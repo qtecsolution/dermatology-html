@@ -4,13 +4,15 @@ const doctorSlider = new Swiper(".doctorSlider", {
     disableOnInteraction: true,
   },
   loop: true,
-  centeredSlides: true,
   loopedSlides: 1,
-  slidesPerView: "auto",
   spaceBetween: 30,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  speed: 600,
+  parallax: true,
   pagination: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
-  },
+  }
 });

@@ -7,6 +7,10 @@
   @include flex-center-vert;
   position: relative;
 
+  @include breakpoint(desktop1400) {
+    min-height: size(853);
+  }
+
   &-content {
     @include flex-column;
     gap: size(48);
@@ -378,6 +382,7 @@
   
   @include breakpoint(desktop1400) {
     padding: size(160) size(0) size(125);
+    min-height: size(1435);
   }
 
   &-content {
@@ -403,13 +408,8 @@
   .doctorinfo {
     position: relative;
 
-    .doctor-thumbnail {
+    .thumbicon {
       position: relative;
-      @include flex-center;
-
-      img {
-        @include wh100;
-      }
 
       .icon {
         width: size(162);
@@ -420,6 +420,17 @@
         bottom: size(-85);
         right: size(-81);
         z-index: 200;
+      }
+    }
+
+    .doctor-thumbnail {
+      @include flex-center;
+      @include w100;
+      max-height: size(474);
+      overflow: hidden;
+
+      img {
+        @include wh100;
       }
     }
 
